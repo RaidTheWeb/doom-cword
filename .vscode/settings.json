@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "m_argv.h": "c",
+        "mman.h": "c",
+        "fb.h": "c"
+    }
+}
