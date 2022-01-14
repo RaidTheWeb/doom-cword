@@ -39,7 +39,7 @@ $(OUTPUT):	$(OBJS)
 	-o $(OUTPUT) $(LIBS) -Wl,-Map,$(OUTPUT).map
 	@echo [Size]
 	-$(CROSS_COMPILE)size $(OUTPUT)
-	cp $(OUTPUT) ../../../build/system-root/usr/bin
+	cp $(OUTPUT) ../../build/system-root/usr/bin
 
 $(OBJS): | $(OBJDIR)
 

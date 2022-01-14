@@ -37,7 +37,6 @@ static uint32_t screenHeight = 0;
 static uint32_t bpp = 0;
 static uint32_t pitch = 0;
 
-
 static uint8_t convertToDoomKey(uint8_t scancode) {
     uint8_t key = 0;
     switch(scancode) {
@@ -179,6 +178,13 @@ static void handleKeyInput() {
 }
 
 void DG_DrawFrame() {
+    /*fclose(file);
+    file = fopen("/dev/fb0", "r+b");
+    fseek(file, 0, SEEK_SET);
+    fread(framebuffer, pitch * screenHeight * sizeof(uint8_t), 1, file);
+    fseek(file, 0, SEEK_SET);
+    fclose(file);
+    file = fopen("/dev/fb0", "w+b");*/
     for(int i = 0; i < DOOMGENERIC_RESY; ++i) {
         // TODO: Work with proper screensize information
         memcpy(framebuffer + posX + (i + posY) * screenWidth, DG_ScreenBuffer + i * DOOMGENERIC_RESX, DOOMGENERIC_RESX * (bpp / 8));
@@ -192,11 +198,11 @@ void DG_DrawFrame() {
 }
 
 void DG_SleepMs(uint32_t ms) {
-    sleep(ms * 1000);
+    sleepms(ms);
 }
 
 uint32_t DG_GetTicksMs() {
-    return xtime();
+    return (uint32_t)xtime();
 }
 
 int DG_GetKey(int* pressed, uint8_t* doomKey) {
