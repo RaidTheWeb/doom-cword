@@ -841,7 +841,7 @@ LOAD /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.
 .plt.sec
  *(.plt.sec)
 
-.text           0x0000000000401230    0x48f7a
+.text           0x0000000000401230    0x48f8a
  *(.text.unlikely .text.*_unlikely .text.unlikely.*)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
@@ -912,7 +912,7 @@ LOAD /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.
                 0x0000000000404810                D_SuggestIWADName
                 0x0000000000404970                D_SuggestGameName
  *fill*         0x0000000000404b06        0xa 
- .text          0x0000000000404b10      0xa08 build/d_loop.o
+ .text          0x0000000000404b10      0xa18 build/d_loop.o
                 0x0000000000404b10                D_QuitNetGame
                 0x0000000000404c10                NetUpdate
                 0x0000000000404cc0                D_ReceiveTic
@@ -920,934 +920,934 @@ LOAD /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.
                 0x0000000000404e50                D_StartNetGame
                 0x0000000000404e90                D_InitNetGame
                 0x0000000000404eb0                TryRunTics
-                0x0000000000405510                D_RegisterLoopCallbacks
- *fill*         0x0000000000405518        0x8 
- .text          0x0000000000405520     0x19d7 build/d_main.o
-                0x0000000000405520                D_GrabMouseCallback
-                0x00000000004059f0                D_ProcessEvents
-                0x0000000000405a40                D_Display
-                0x0000000000405a60                D_BindVariables
-                0x0000000000405b80                D_DoomLoop
-                0x0000000000405c70                D_PageTicker
-                0x0000000000405c90                D_PageDrawer
-                0x0000000000405cc0                D_AdvanceDemo
-                0x0000000000405cd0                D_DoAdvanceDemo
-                0x0000000000405f30                D_StartTitle
-                0x0000000000405f50                D_IdentifyVersion
-                0x0000000000406150                D_SetGameDescription
-                0x0000000000406240                PrintDehackedBanners
-                0x0000000000406250                PrintGameVersion
-                0x00000000004062d0                D_DoomMain
- *fill*         0x0000000000406ef7        0x9 
- .text          0x0000000000406f00      0x3f5 build/d_mode.o
-                0x0000000000406f00                D_ValidGameMode
-                0x0000000000406f90                D_ValidEpisodeMap
-                0x0000000000407140                D_GetNumEpisodes
-                0x0000000000407230                D_ValidGameVersion
-                0x00000000004072b0                D_IsEpisodeMap
-                0x00000000004072e0                D_GameMissionString
- *fill*         0x00000000004072f5        0xb 
- .text          0x0000000000407300      0x584 build/d_net.o
-                0x0000000000407550                D_ConnectNetGame
-                0x0000000000407630                D_CheckNetGame
- *fill*         0x0000000000407884        0xc 
- .text          0x0000000000407890     0x1ed7 build/f_finale.o
-                0x0000000000407890                F_StartFinale
-                0x0000000000407b70                F_Responder
-                0x0000000000407c20                F_Ticker
-                0x0000000000408200                F_TextWrite
-                0x0000000000408350                F_StartCast
-                0x00000000004083e0                F_CastTicker
-                0x0000000000408870                F_CastResponder
-                0x0000000000408910                F_CastPrint
-                0x0000000000408a00                F_CastDrawer
-                0x0000000000408aa0                F_DrawPatchCol
-                0x0000000000408e00                F_BunnyScroll
-                0x00000000004096d0                F_Drawer
- *fill*         0x0000000000409767        0x9 
- .text          0x0000000000409770      0x7f6 build/f_wipe.o
-                0x0000000000409770                wipe_doColorXForm
-                0x0000000000409800                wipe_exitColorXForm
-                0x0000000000409810                wipe_doMelt
-                0x00000000004099d0                wipe_initColorXForm
-                0x0000000000409a00                wipe_exitMelt
-                0x0000000000409a30                wipe_initMelt
-                0x0000000000409d90                wipe_shittyColMajorXform
-                0x0000000000409e30                wipe_StartScreen
-                0x0000000000409e60                wipe_EndScreen
-                0x0000000000409ec0                wipe_ScreenWipe
- *fill*         0x0000000000409f66        0xa 
- .text          0x0000000000409f70     0x3d13 build/g_game.o
-                0x0000000000409f70                G_CmdChecksum
-                0x0000000000409f80                G_BuildTiccmd
-                0x000000000040ab70                G_DoLoadLevel
-                0x000000000040ad50                G_Responder
-                0x000000000040b530                G_InitPlayer
-                0x000000000040b5d0                G_PlayerFinishLevel
-                0x000000000040b630                G_PlayerReborn
-                0x000000000040b6d0                G_CheckSpot
-                0x000000000040ba00                G_DeathMatchSpawnPlayer
-                0x000000000040bad0                G_DoReborn
-                0x000000000040bc30                G_ScreenShot
-                0x000000000040bc40                G_ExitLevel
-                0x000000000040bc60                G_SecretExitLevel
-                0x000000000040bcb0                G_DoCompleted
-                0x000000000040c3f0                G_WorldDone
-                0x000000000040c460                G_DoWorldDone
-                0x000000000040c4a0                G_LoadGame
-                0x000000000040c4d0                G_SaveGame
-                0x000000000040c500                G_DoSaveGame
-                0x000000000040c6d0                G_DeferedInitNew
-                0x000000000040c6f0                G_InitNew
-                0x000000000040ca10                G_DoLoadGame
-                0x000000000040caf0                G_DoNewGame
-                0x000000000040cb80                G_RecordDemo
-                0x000000000040cc40                G_VanillaVersionCode
-                0x000000000040cca0                G_BeginRecording
-                0x000000000040ce90                G_DeferedPlayDemo
-                0x000000000040ceb0                G_DoPlayDemo
-                0x000000000040d1e0                G_TimeDemo
-                0x000000000040d220                G_CheckDemoStatus
-                0x000000000040d3c0                G_ReadDemoTiccmd
-                0x000000000040d450                G_WriteDemoTiccmd
-                0x000000000040d5a0                G_Ticker
- *fill*         0x000000000040dc83        0xd 
- .text          0x000000000040dc90      0xb36 build/hu_lib.o
-                0x000000000040dc90                HUlib_init
-                0x000000000040dca0                HUlib_clearTextLine
-                0x000000000040dcc0                HUlib_initTextLine
-                0x000000000040dce0                HUlib_addCharToTextLine
-                0x000000000040dd10                HUlib_delCharFromTextLine
-                0x000000000040dd40                HUlib_drawTextLine
-                0x000000000040de30                HUlib_eraseTextLine
-                0x000000000040df10                HUlib_initSText
-                0x000000000040e010                HUlib_addLineToSText
-                0x000000000040e0a0                HUlib_addMessageToSText
-                0x000000000040e1f0                HUlib_drawSText
-                0x000000000040e320                HUlib_eraseSText
-                0x000000000040e4a0                HUlib_initIText
-                0x000000000040e4e0                HUlib_delCharFromIText
-                0x000000000040e510                HUlib_eraseLineFromIText
-                0x000000000040e550                HUlib_resetIText
-                0x000000000040e570                HUlib_addPrefixToIText
-                0x000000000040e5d0                HUlib_keyInIText
-                0x000000000040e660                HUlib_drawIText
-                0x000000000040e680                HUlib_eraseIText
- *fill*         0x000000000040e7c6        0xa 
- .text          0x000000000040e7d0      0xf4c build/hu_stuff.o
-                0x000000000040e7d0                HU_Init
-                0x000000000040e820                HU_Stop
-                0x000000000040e830                HU_Start
-                0x000000000040ea50                HU_Drawer
-                0x000000000040ea90                HU_Erase
-                0x000000000040eac0                HU_Ticker
-                0x000000000040efc0                HU_queueChatChar
-                0x000000000040f000                HU_dequeueChatChar
-                0x000000000040f030                HU_Responder
- .text          0x000000000040f71c        0x0 build/info.o
- *fill*         0x000000000040f71c        0x4 
- .text          0x000000000040f720       0x83 build/i_cdmus.o
-                0x000000000040f720                I_CDMusInit
-                0x000000000040f730                I_CDMusPrintStartup
-                0x000000000040f740                I_CDMusPlay
-                0x000000000040f750                I_CDMusStop
-                0x000000000040f760                I_CDMusResume
-                0x000000000040f770                I_CDMusSetVolume
-                0x000000000040f780                I_CDMusFirstTrack
-                0x000000000040f790                I_CDMusLastTrack
-                0x000000000040f7a0                I_CDMusTrackLength
- *fill*         0x000000000040f7a3        0xd 
- .text          0x000000000040f7b0        0x1 build/i_endoom.o
-                0x000000000040f7b0                I_Endoom
- *fill*         0x000000000040f7b1        0xf 
- .text          0x000000000040f7c0       0xec build/i_joystick.o
-                0x000000000040f7c0                I_ShutdownJoystick
-                0x000000000040f7d0                I_InitJoystick
-                0x000000000040f7e0                I_UpdateJoystick
-                0x000000000040f7f0                I_BindJoystickVariables
- *fill*         0x000000000040f8ac        0x4 
- .text          0x000000000040f8b0     0x39b5 build/i_scale.o
-                0x00000000004131d0                I_InitScale
-                0x00000000004131f0                I_ResetScaleTables
- *fill*         0x0000000000413265        0xb 
- .text          0x0000000000413270      0x3a1 build/i_sound.o
-                0x0000000000413270                I_InitSound
-                0x0000000000413310                I_ShutdownSound
-                0x0000000000413370                I_GetSfxLumpNum
-                0x0000000000413390                I_UpdateSound
-                0x00000000004133f0                I_UpdateSoundParams
-                0x0000000000413430                I_StartSound
-                0x0000000000413480                I_StopSound
-                0x00000000004134a0                I_SoundIsPlaying
-                0x00000000004134c0                I_PrecacheSounds
-                0x00000000004134f0                I_InitMusic
-                0x0000000000413500                I_ShutdownMusic
-                0x0000000000413510                I_SetMusicVolume
-                0x0000000000413530                I_PauseSong
-                0x0000000000413550                I_ResumeSong
-                0x0000000000413570                I_RegisterSong
-                0x0000000000413590                I_UnRegisterSong
-                0x00000000004135b0                I_PlaySong
-                0x00000000004135d0                I_StopSong
-                0x00000000004135f0                I_MusicIsPlaying
-                0x0000000000413610                I_BindSoundVariables
- *fill*         0x0000000000413611        0xf 
- .text          0x0000000000413620      0x6c0 build/i_system.o
-                0x0000000000413620                I_AtExit
-                0x0000000000413660                I_Tactile
-                0x0000000000413670                I_PrintBanner
-                0x00000000004136b0                I_PrintDivider
-                0x00000000004136e0                I_PrintStartupBanner
-                0x00000000004137a0                I_ConsoleStdout
-                0x00000000004137b0                I_Quit
-                0x00000000004137d0                I_Error
-                0x0000000000413a60                I_ZoneBase
-                0x0000000000413ae0                I_GetMemoryValue
- .text          0x0000000000413ce0       0xa1 build/i_timer.o
-                0x0000000000413ce0                I_GetTicks
-                0x0000000000413cf0                I_GetTime
-                0x0000000000413d30                I_GetTimeMS
-                0x0000000000413d60                I_Sleep
-                0x0000000000413d70                I_WaitVBL
-                0x0000000000413d80                I_InitTimer
- *fill*         0x0000000000413d81        0xf 
- .text          0x0000000000413d90      0x282 build/memio.o
-                0x0000000000413d90                mem_fopen_read
-                0x0000000000413dd0                mem_fread
-                0x0000000000413e50                mem_fopen_write
-                0x0000000000413eb0                mem_fwrite
-                0x0000000000413f70                mem_get_buf
-                0x0000000000413f80                mem_fclose
-                0x0000000000413fb0                mem_ftell
-                0x0000000000413fc0                mem_fseek
- *fill*         0x0000000000414012        0xe 
- .text          0x0000000000414020      0x19a build/m_argv.o
-                0x0000000000414020                M_CheckParmWithArgs
-                0x0000000000414090                M_ParmExists
-                0x0000000000414110                M_CheckParm
-                0x0000000000414180                M_FindResponseFile
-                0x0000000000414190                M_GetExecutableName
- *fill*         0x00000000004141ba        0x6 
- .text          0x00000000004141c0       0x3c build/m_bbox.o
-                0x00000000004141c0                M_ClearBox
-                0x00000000004141d0                M_AddToBox
- *fill*         0x00000000004141fc        0x4 
- .text          0x0000000000414200       0xd3 build/m_cheat.o
-                0x0000000000414200                cht_CheckCheat
-                0x00000000004142c0                cht_GetParam
- *fill*         0x00000000004142d3        0xd 
- .text          0x00000000004142e0      0x4c5 build/m_config.o
-                0x00000000004143a0                M_SetConfigFilenames
-                0x00000000004143b0                M_SaveDefaults
-                0x00000000004143c0                M_SaveDefaultsAlternate
-                0x00000000004143d0                M_LoadDefaults
-                0x00000000004144b0                M_BindVariable
-                0x00000000004144d0                M_SetVariable
-                0x0000000000414640                M_GetIntVariable
-                0x0000000000414670                M_GetStrVariable
-                0x00000000004146b0                M_GetFloatVariable
-                0x00000000004146f0                M_SetConfigDir
-                0x0000000000414750                M_GetSaveGameDir
- *fill*         0x00000000004147a5        0xb 
- .text          0x00000000004147b0      0x7a1 build/m_controls.o
-                0x00000000004147b0                M_BindBaseControls
-                0x0000000000414950                M_BindHereticControls
-                0x00000000004149e0                M_BindHexenControls
-                0x0000000000414a90                M_BindStrifeControls
-                0x0000000000414bd0                M_BindWeaponControls
-                0x0000000000414cb0                M_BindMapControls
-                0x0000000000414d70                M_BindMenuControls
-                0x0000000000414ef0                M_BindChatControls
-                0x0000000000414f50                M_ApplyPlatformDefaults
- *fill*         0x0000000000414f51        0xf 
- .text          0x0000000000414f60       0x60 build/m_fixed.o
-                0x0000000000414f60                FixedMul
-                0x0000000000414f80                FixedDiv
- .text          0x0000000000414fc0     0x3464 build/m_menu.o
-                0x0000000000414fc0                M_Sound
-                0x0000000000414fe0                M_Options
-                0x0000000000415000                M_ChangeMessages
-                0x0000000000415060                M_ReadThis
-                0x0000000000415080                M_FinishReadThis
-                0x00000000004150a0                M_DrawReadThis2
-                0x00000000004150d0                M_DrawMainMenu
-                0x0000000000415100                M_DrawNewGame
-                0x0000000000415150                M_DrawEpisode
-                0x0000000000415180                M_LoadSelect
-                0x00000000004151c0                M_SaveSelect
-                0x0000000000415270                M_QuitDOOM
-                0x0000000000415300                M_DrawReadThis1
-                0x00000000004153f0                M_SfxVol
-                0x0000000000415440                M_MusicVol
-                0x0000000000415490                M_ChangeDetail
-                0x0000000000415500                M_SizeDisplay
-                0x0000000000415570                M_ChangeSensitivity
-                0x00000000004155b0                M_QuickSaveResponse
-                0x0000000000415610                M_VerifyNightmare
-                0x0000000000415650                M_ChooseSkill
-                0x00000000004156d0                M_EndGameResponse
-                0x0000000000415710                M_NewGame
-                0x00000000004157c0                M_Episode
-                0x0000000000415890                M_ReadThis2
-                0x0000000000415990                M_DrawSound
-                0x0000000000415a00                M_DrawOptions
-                0x0000000000415bf0                M_EndGame
-                0x0000000000415c90                M_QuickLoadResponse
-                0x0000000000415cf0                M_QuitResponse
-                0x0000000000415d60                M_DrawLoad
-                0x0000000000415ee0                M_DrawSave
-                0x0000000000416170                M_LoadGame
-                0x00000000004162a0                M_SaveGame
-                0x00000000004163f0                M_ReadSaveStrings
-                0x00000000004164b0                M_DrawSaveLoadBorder
-                0x0000000000416530                M_DoSave
-                0x0000000000416570                M_QuickSave
-                0x0000000000416740                M_QuickLoad
-                0x0000000000416860                M_DrawThermo
-                0x0000000000416930                M_DrawEmptyCell
-                0x0000000000416970                M_DrawSelCell
-                0x00000000004169b0                M_StartMessage
-                0x00000000004169f0                M_StopMessage
-                0x0000000000416a10                M_StringWidth
-                0x0000000000416a80                M_StringHeight
-                0x0000000000416d50                M_WriteText
-                0x0000000000416de0                M_Responder
-                0x0000000000417ca0                M_StartControlPanel
-                0x0000000000417cd0                M_Drawer
-                0x00000000004182f0                M_ClearMenus
-                0x0000000000418300                M_SetupNextMenu
-                0x0000000000418320                M_Ticker
-                0x0000000000418360                M_Init
- *fill*         0x0000000000418424        0xc 
- .text          0x0000000000418430      0x9c6 build/m_misc.o
-                0x0000000000418430                M_MakeDirectory
-                0x0000000000418440                M_FileExists
-                0x0000000000418490                M_FileLength
-                0x00000000004184e0                M_WriteFile
-                0x0000000000418530                M_ReadFile
-                0x0000000000418610                M_StrToInt
-                0x00000000004186a0                M_ExtractFileBase
-                0x00000000004187f0                M_ForceUppercase
-                0x0000000000418820                M_StrCaseStr
-                0x0000000000418890                M_StringDuplicate
-                0x00000000004188e0                M_StringReplace
-                0x0000000000418a00                M_StringCopy
-                0x0000000000418a40                M_StringConcat
-                0x0000000000418ab0                M_StringStartsWith
-                0x0000000000418af0                M_StringEndsWith
-                0x0000000000418b40                M_StringJoin
-                0x0000000000418cd0                M_TempFile
-                0x0000000000418cf0                M_vsnprintf
-                0x0000000000418d30                M_snprintf
- *fill*         0x0000000000418df6        0xa 
- .text          0x0000000000418e00       0x55 build/m_random.o
-                0x0000000000418e00                P_Random
-                0x0000000000418e20                M_Random
-                0x0000000000418e40                M_ClearRandom
- *fill*         0x0000000000418e55        0xb 
- .text          0x0000000000418e60      0x536 build/p_ceilng.o
-                0x0000000000418e60                T_MoveCeiling
-                0x0000000000419070                EV_DoCeiling
-                0x0000000000419270                P_AddActiveCeiling
-                0x00000000004192b0                P_RemoveActiveCeiling
-                0x00000000004192f0                P_ActivateInStasisCeiling
-                0x0000000000419340                EV_CeilingCrushStop
- *fill*         0x0000000000419396        0xa 
- .text          0x00000000004193a0      0x835 build/p_doors.o
-                0x00000000004193a0                T_VerticalDoor
-                0x0000000000419550                EV_DoDoor
-                0x0000000000419750                EV_DoLockedDoor
-                0x0000000000419840                EV_VerticalDoor
-                0x0000000000419b00                P_SpawnDoorCloseIn30
-                0x0000000000419b60                P_SpawnDoorRaiseIn5Mins
- *fill*         0x0000000000419bd5        0xb 
- .text          0x0000000000419be0     0x3953 build/p_enemy.o
-                0x0000000000419be0                PIT_VileCheck
-                0x0000000000419e80                P_RecursiveSound
-                0x000000000041a020                P_NoiseAlert
-                0x000000000041a0f0                P_CheckMeleeRange
-                0x000000000041a160                P_CheckMissileRange
-                0x000000000041a290                P_Move
-                0x000000000041a3f0                P_TryWalk
-                0x000000000041a550                P_NewChaseDir
-                0x000000000041aa60                P_LookForPlayers
-                0x000000000041abc0                A_KeenDie
-                0x000000000041ac40                A_Look
-                0x000000000041ad50                A_Chase
-                0x000000000041b170                A_FaceTarget
-                0x000000000041b1f0                A_PosAttack
-                0x000000000041b2e0                A_SPosAttack
-                0x000000000041b400                A_CPosAttack
-                0x000000000041b510                A_CPosRefire
-                0x000000000041b5d0                A_SpidRefire
-                0x000000000041b690                A_BspiAttack
-                0x000000000041b710                A_TroopAttack
-                0x000000000041b840                A_SargAttack
-                0x000000000041b940                A_HeadAttack
-                0x000000000041ba80                A_CyberAttack
-                0x000000000041bb00                A_BruisAttack
-                0x000000000041bbc0                A_SkelMissile
-                0x000000000041bc70                A_Tracer
-                0x000000000041be00                A_SkelWhoosh
-                0x000000000041be80                A_SkelFist
-                0x000000000041bf90                A_VileChase
-                0x000000000041c170                A_VileStart
-                0x000000000041c180                A_StartFire
-                0x000000000041c240                A_FireCrackle
-                0x000000000041c300                A_Fire
-                0x000000000041c3b0                A_VileTarget
-                0x000000000041c460                A_VileAttack
-                0x000000000041c5c0                A_FatRaise
-                0x000000000041c630                A_FatAttack1
-                0x000000000041c730                A_FatAttack2
-                0x000000000041c830                A_FatAttack3
-                0x000000000041c970                A_SkullAttack
-                0x000000000041cb60                A_PainShootSkull
-                0x000000000041cbc0                A_PainAttack
-                0x000000000041cca0                A_PainDie
-                0x000000000041ce00                A_Scream
-                0x000000000041cea0                A_XScream
-                0x000000000041ceb0                A_Pain
-                0x000000000041ced0                A_Fall
-                0x000000000041cee0                A_Explode
-                0x000000000041cf00                A_BossDeath
-                0x000000000041d170                A_Hoof
-                0x000000000041d190                A_Metal
-                0x000000000041d1b0                A_BabyMetal
-                0x000000000041d1d0                A_OpenShotgun2
-                0x000000000041d1e0                A_LoadShotgun2
-                0x000000000041d1f0                A_CloseShotgun2
-                0x000000000041d220                A_BrainAwake
-                0x000000000041d2b0                A_BrainPain
-                0x000000000041d2c0                A_BrainScream
-                0x000000000041d380                A_BrainExplode
-                0x000000000041d410                A_BrainDie
-                0x000000000041d420                A_BrainSpit
-                0x000000000041d4c0                A_SpawnSound
-                0x000000000041d4f0                A_SpawnFly
-                0x000000000041d510                A_PlayerScream
- *fill*         0x000000000041d533        0xd 
- .text          0x000000000041d540      0x954 build/p_floor.o
-                0x000000000041d540                T_MoveFloor
-                0x000000000041d6e0                T_MovePlane
-                0x000000000041d870                EV_DoFloor
-                0x000000000041dcd0                EV_BuildStairs
- *fill*         0x000000000041de94        0xc 
- .text          0x000000000041dea0     0x169a build/p_inter.o
-                0x000000000041dea0                P_GiveAmmo
-                0x000000000041e030                P_GiveWeapon
-                0x000000000041e2f0                P_GiveBody
-                0x000000000041e330                P_GiveArmor
-                0x000000000041e350                P_GiveCard
-                0x000000000041e370                P_GivePower
-                0x000000000041e440                P_TouchSpecialThing
-                0x000000000041efa0                P_KillMobj
-                0x000000000041f1a0                P_DamageMobj
- *fill*         0x000000000041f53a        0x6 
- .text          0x000000000041f540      0x54b build/p_lights.o
-                0x000000000041f540                T_StrobeFlash
-                0x000000000041f570                T_Glow
-                0x000000000041f5d0                T_FireFlicker
-                0x000000000041f620                T_LightFlash
-                0x000000000041f680                P_SpawnFireFlicker
-                0x000000000041f6e0                P_SpawnLightFlash
-                0x000000000041f750                P_SpawnStrobeFlash
-                0x000000000041f800                EV_StartLightStrobing
-                0x000000000041f8d0                EV_TurnTagLightsOff
-                0x000000000041f980                EV_LightTurnOn
-                0x000000000041fa30                P_SpawnGlowingLight
- *fill*         0x000000000041fa8b        0x5 
- .text          0x000000000041fa90     0x1900 build/p_map.o
-                0x000000000041fa90                PIT_CheckThing
-                0x000000000041fca0                PTR_SlideTraverse
-                0x000000000041fd80                PTR_AimTraverse
-                0x000000000041ff40                PTR_ShootTraverse
-                0x0000000000420240                PIT_StompThing
-                0x00000000004202e0                PIT_CheckLine
-                0x00000000004204d0                PTR_UseTraverse
-                0x0000000000420550                PIT_RadiusAttack
-                0x0000000000420840                P_TeleportMove
-                0x00000000004209e0                P_CheckPosition
-                0x0000000000420bb0                PIT_ChangeSector
-                0x0000000000420d10                P_TryMove
-                0x0000000000420d50                P_ThingHeightClip
-                0x0000000000420dc0                P_HitSlideLine
-                0x0000000000420e00                P_SlideMove
-                0x0000000000421100                P_AimLineAttack
-                0x00000000004211b0                P_LineAttack
-                0x0000000000421230                P_UseLines
-                0x0000000000421280                P_RadiusAttack
-                0x0000000000421320                P_ChangeSector
- .text          0x0000000000421390     0x1732 build/p_maputl.o
-                0x0000000000421390                P_AproxDistance
-                0x00000000004213c0                P_PointOnLineSide
-                0x0000000000421450                P_BoxOnLineSide
-                0x00000000004216e0                P_PointOnDivlineSide
-                0x0000000000421790                P_MakeDivline
-                0x00000000004217b0                P_InterceptVector
-                0x0000000000421840                P_LineOpening
-                0x00000000004218a0                P_UnsetThingPosition
-                0x0000000000421950                P_SetThingPosition
-                0x0000000000421a10                P_BlockLinesIterator
-                0x0000000000421ac0                P_BlockThingsIterator
-                0x0000000000421b40                PIT_AddLineIntercepts
-                0x0000000000422140                PIT_AddThingIntercepts
-                0x0000000000422590                P_TraverseIntercepts
-                0x0000000000422620                P_PathTraverse
- *fill*         0x0000000000422ac2        0xe 
- .text          0x0000000000422ad0     0x1d53 build/p_mobj.o
-                0x0000000000422ad0                P_SetMobjState
-                0x0000000000422c10                P_ExplodeMissile
-                0x0000000000422db0                P_XYMovement
-                0x00000000004232d0                P_ZMovement
-                0x0000000000423560                P_SpawnMobj
-                0x00000000004236e0                P_NightmareRespawn
-                0x0000000000423890                P_MobjThinker
-                0x0000000000423c20                P_RemoveMobj
-                0x0000000000423cc0                P_RespawnSpecials
-                0x0000000000423e20                P_SpawnPlayer
-                0x0000000000423fa0                P_SpawnMapThing
-                0x0000000000424200                P_SpawnPuff
-                0x00000000004242a0                P_SpawnBlood
-                0x0000000000424440                P_CheckMissileSpawn
-                0x00000000004244b0                P_SubstNullMobj
-                0x00000000004244f0                P_SpawnMissile
-                0x0000000000424690                P_SpawnPlayerMissile
- *fill*         0x0000000000424823        0xd 
- .text          0x0000000000424830      0x5fd build/p_plats.o
-                0x0000000000424830                T_PlatRaise
-                0x0000000000424a30                EV_DoPlat
-                0x0000000000424d00                P_ActivateInStasis
-                0x0000000000424d50                EV_StopPlat
-                0x0000000000424da0                P_AddActivePlat
-                0x0000000000424de0                P_RemoveActivePlat
- *fill*         0x0000000000424e2d        0x3 
- .text          0x0000000000424e30     0x1f52 build/p_pspr.o
-                0x0000000000424e30                P_SetPsprite
-                0x0000000000424f10                P_CalcSwing
-                0x0000000000424f70                P_BringUpWeapon
-                0x0000000000425060                P_CheckAmmo
-                0x00000000004252d0                P_FireWeapon
-                0x00000000004253b0                P_DropWeapon
-                0x0000000000425450                A_WeaponReady
-                0x00000000004256d0                A_ReFire
-                0x0000000000425a30                A_CheckReload
-                0x0000000000425c90                A_Lower
-                0x0000000000425dc0                A_Raise
-                0x0000000000425e80                A_GunFlash
-                0x0000000000425f30                A_Punch
-                0x0000000000426000                A_Saw
-                0x0000000000426130                A_FireMissile
-                0x0000000000426160                A_FireBFG
-                0x0000000000426190                A_FirePlasma
-                0x0000000000426260                P_BulletSlope
-                0x00000000004262d0                P_GunShot
-                0x0000000000426350                A_FirePistol
-                0x0000000000426510                A_FireShotgun
-                0x00000000004266e0                A_FireShotgun2
-                0x00000000004268b0                A_FireCGun
-                0x0000000000426ac0                A_Light0
-                0x0000000000426ad0                A_Light1
-                0x0000000000426ae0                A_Light2
-                0x0000000000426af0                A_BFGSpray
-                0x0000000000426bb0                A_BFGsound
-                0x0000000000426bc0                P_SetupPsprites
-                0x0000000000426cc0                P_MovePsprites
- *fill*         0x0000000000426d82        0xe 
- .text          0x0000000000426d90     0xa35a build/p_saveg.o
-                0x00000000004284e0                P_TempSaveGameFile
-                0x0000000000428520                P_SaveGameFile
-                0x00000000004285b0                P_WriteSaveGameHeader
-                0x0000000000428a40                P_ReadSaveGameHeader
-                0x0000000000428e70                P_ReadSaveGameEOF
-                0x0000000000428ef0                P_WriteSaveGameEOF
-                0x0000000000428f60                P_ArchivePlayers
-                0x0000000000429f60                P_UnArchivePlayers
-                0x000000000042d3d0                P_ArchiveWorld
-                0x000000000042e090                P_UnArchiveWorld
-                0x000000000042ed90                P_ArchiveThinkers
-                0x000000000042f4f0                P_UnArchiveThinkers
-                0x000000000042fc90                P_ArchiveSpecials
-                0x00000000004307c0                P_UnArchiveSpecials
- *fill*         0x00000000004310ea        0x6 
- .text          0x00000000004310f0     0x13fc build/p_setup.o
-                0x00000000004310f0                P_LoadVertexes
-                0x0000000000431200                GetSectorAtNullAddress
-                0x0000000000431260                P_LoadSegs
-                0x0000000000431460                P_LoadSubsectors
-                0x00000000004315f0                P_LoadSectors
-                0x00000000004316f0                P_LoadNodes
-                0x0000000000431820                P_LoadThings
-                0x00000000004318f0                P_LoadLineDefs
-                0x0000000000431b10                P_LoadSideDefs
-                0x0000000000431c20                P_LoadBlockMap
-                0x0000000000431cc0                P_GroupLines
-                0x0000000000431fd0                P_SetupLevel
-                0x00000000004324d0                P_Init
- *fill*         0x00000000004324ec        0x4 
- .text          0x00000000004324f0      0x8b6 build/p_sight.o
-                0x00000000004324f0                P_DivlineSide
-                0x0000000000432570                P_InterceptVector2
-                0x0000000000432600                P_CrossSubsector
-                0x0000000000432b40                P_CrossBSPNode
-                0x0000000000432cd0                P_CheckSight
- *fill*         0x0000000000432da6        0xa 
- .text          0x0000000000432db0     0x14b0 build/p_spec.o
-                0x0000000000432db0                P_InitPicAnims
-                0x0000000000432eb0                getSide
-                0x0000000000432ef0                getSector
-                0x0000000000432f30                twoSided
-                0x0000000000432f60                getNextSector
-                0x0000000000432f80                P_FindLowestFloorSurrounding
-                0x0000000000432fe0                P_FindHighestFloorSurrounding
-                0x0000000000433050                P_FindNextHighestFloor
-                0x0000000000433280                P_FindLowestCeilingSurrounding
-                0x00000000004332f0                P_FindHighestCeilingSurrounding
-                0x0000000000433350                P_FindSectorFromLineTag
-                0x00000000004333b0                P_FindMinSurroundingLight
-                0x0000000000433410                P_CrossSpecialLine
-                0x0000000000433960                P_ShootSpecialLine
-                0x0000000000433a00                P_PlayerInSpecialSector
-                0x0000000000433b10                P_UpdateSpecials
-                0x0000000000433cc0                EV_DoDonut
-                0x0000000000433f80                P_SpawnSpecials
- .text          0x0000000000434260     0x13e0 build/p_switch.o
-                0x0000000000434260                P_InitSwitchList
-                0x0000000000434330                P_StartButton
-                0x0000000000434650                P_ChangeSwitchTexture
-                0x00000000004350b0                P_UseSpecialLine
- .text          0x0000000000435640      0x1b3 build/p_telept.o
-                0x0000000000435640                EV_Teleport
- *fill*         0x00000000004357f3        0xd 
- .text          0x0000000000435800      0x20f build/p_tick.o
-                0x0000000000435800                P_InitThinkers
-                0x0000000000435820                P_AddThinker
-                0x0000000000435840                P_RemoveThinker
-                0x0000000000435850                P_AllocateThinker
-                0x0000000000435860                P_RunThinkers
-                0x00000000004358d0                P_Ticker
- *fill*         0x0000000000435a0f        0x1 
- .text          0x0000000000435a10      0x662 build/p_user.o
-                0x0000000000435a10                P_Thrust
-                0x0000000000435a60                P_CalcHeight
-                0x0000000000435ba0                P_MovePlayer
-                0x0000000000435cc0                P_DeathThink
-                0x0000000000435da0                P_PlayerThink
- *fill*         0x0000000000436072        0xe 
- .text          0x0000000000436080      0x7e7 build/r_bsp.o
-                0x0000000000436080                R_ClearDrawSegs
-                0x0000000000436090                R_ClipSolidWallSegment
-                0x00000000004361d0                R_ClipPassWallSegment
-                0x0000000000436270                R_ClearClipSegs
-                0x00000000004362a0                R_AddLine
-                0x00000000004363d0                R_CheckBBox
-                0x0000000000436550                R_Subsector
-                0x00000000004367c0                R_RenderBSPNode
- *fill*         0x0000000000436867        0x9 
- .text          0x0000000000436870     0x1295 build/r_data.o
-                0x0000000000436870                R_DrawColumnInCache
-                0x0000000000436900                R_GenerateComposite
-                0x0000000000436b00                R_GenerateLookup
-                0x0000000000436cf0                R_GetColumn
-                0x0000000000436d80                R_InitTextures
-                0x0000000000437390                R_InitFlats
-                0x0000000000437410                R_InitSpriteLumps
-                0x0000000000437520                R_InitColormaps
-                0x0000000000437550                R_InitData
-                0x0000000000437610                R_FlatNumForName
-                0x0000000000437670                R_CheckTextureNumForName
-                0x00000000004376f0                R_TextureNumForName
-                0x0000000000437780                R_PrecacheLevel
- *fill*         0x0000000000437b05        0xb 
- .text          0x0000000000437b10      0xf11 build/r_draw.o
-                0x0000000000437b10                R_DrawColumn
-                0x0000000000437be0                R_DrawColumnLow
-                0x0000000000437cc0                R_DrawFuzzColumn
-                0x0000000000437dd0                R_DrawFuzzColumnLow
-                0x0000000000437f30                R_DrawTranslatedColumn
-                0x0000000000438000                R_DrawTranslatedColumnLow
-                0x0000000000438110                R_InitTranslationTables
-                0x00000000004381b0                R_DrawSpan
-                0x00000000004382c0                R_DrawSpanLow
-                0x0000000000438400                R_InitBuffer
-                0x00000000004385f0                R_FillBackScreen
-                0x00000000004388d0                R_VideoErase
-                0x0000000000438910                R_DrawViewBorder
- *fill*         0x0000000000438a21        0xf 
- .text          0x0000000000438a30      0xeed build/r_main.o
-                0x0000000000438a30                R_AddPointToBox
-                0x0000000000438a50                R_PointOnSide
-                0x0000000000438af0                R_PointOnSegSide
-                0x0000000000438ba0                R_PointToAngle
-                0x0000000000438d00                R_PointToAngle2
-                0x0000000000438e80                R_PointToDist
-                0x0000000000438ef0                R_InitPointToAngle
-                0x0000000000438f00                R_ScaleFromGlobalAngle
-                0x0000000000438f90                R_InitTables
-                0x0000000000438fa0                R_InitTextureMapping
-                0x00000000004391a0                R_InitLightTables
-                0x0000000000439240                R_SetViewSize
-                0x0000000000439260                R_ExecuteSetViewSize
-                0x00000000004395d0                R_Init
-                0x00000000004396f0                R_PointInSubsector
-                0x00000000004397f0                R_SetupFrame
-                0x00000000004398d0                R_RenderPlayerView
- *fill*         0x000000000043991d        0x3 
- .text          0x0000000000439920      0x8b3 build/r_plane.o
-                0x0000000000439920                R_InitPlanes
-                0x0000000000439930                R_MapPlane
-                0x0000000000439af0                R_ClearPlanes
-                0x0000000000439c50                R_FindPlane
-                0x0000000000439d50                R_CheckPlane
-                0x0000000000439e10                R_MakeSpans
-                0x0000000000439f40                R_DrawPlanes
- *fill*         0x000000000043a1d3        0xd 
- .text          0x000000000043a1e0     0x1059 build/r_segs.o
-                0x000000000043a1e0                R_RenderMaskedSegRange
-                0x000000000043a460                R_RenderSegLoop
-                0x000000000043a800                R_StoreWallRange
- *fill*         0x000000000043b239        0x7 
- .text          0x000000000043b240        0xb build/r_sky.o
-                0x000000000043b240                R_InitSkyMap
- *fill*         0x000000000043b24b        0x5 
- .text          0x000000000043b250     0x1651 build/r_things.o
-                0x000000000043b250                R_InstallSpriteLump
-                0x000000000043b420                R_InitSpriteDefs
-                0x000000000043b820                R_InitSprites
-                0x000000000043b850                R_ClearSprites
-                0x000000000043b860                R_NewVisSprite
-                0x000000000043b890                R_DrawMaskedColumn
-                0x000000000043b990                R_DrawVisSprite
-                0x000000000043bae0                R_ProjectSprite
-                0x000000000043be20                R_AddSprites
-                0x000000000043beb0                R_DrawPSprite
-                0x000000000043c110                R_DrawPlayerSprites
-                0x000000000043c1c0                R_SortVisSprites
-                0x000000000043c310                R_DrawSprite
-                0x000000000043c770                R_DrawMasked
- *fill*         0x000000000043c8a1        0xf 
- .text          0x000000000043c8b0     0x178b build/sha1.o
-                0x000000000043db60                SHA1_Init
-                0x000000000043db80                SHA1_Update
-                0x000000000043dcf0                SHA1_Final
-                0x000000000043dec0                SHA1_UpdateInt32
-                0x000000000043e010                SHA1_UpdateString
- .text          0x000000000043e03b        0x0 build/sounds.o
- *fill*         0x000000000043e03b        0x5 
- .text          0x000000000043e040       0xf1 build/statdump.o
-                0x000000000043e040                StatCopy
-                0x000000000043e130                StatDump
- *fill*         0x000000000043e131        0xf 
- .text          0x000000000043e140      0x4ac build/st_lib.o
-                0x000000000043e140                STlib_init
-                0x000000000043e160                STlib_initNum
-                0x000000000043e190                STlib_drawNum
-                0x000000000043e330                STlib_updateNum
-                0x000000000043e350                STlib_initPercent
-                0x000000000043e380                STlib_updatePercent
-                0x000000000043e3e0                STlib_initMultIcon
-                0x000000000043e410                STlib_updateMultIcon
-                0x000000000043e4f0                STlib_initBinIcon
-                0x000000000043e520                STlib_updateBinIcon
- *fill*         0x000000000043e5ec        0x4 
- .text          0x000000000043e5f0     0x1e76 build/st_stuff.o
-                0x000000000043ec20                ST_refreshBackground
-                0x000000000043ecb0                ST_Responder
-                0x000000000043f250                ST_calcPainOffset
-                0x000000000043f2b0                ST_updateFaceWidget
-                0x000000000043f8d0                ST_updateWidgets
-                0x000000000043fa40                ST_Ticker
-                0x000000000043fa70                ST_doPaletteStuff
-                0x000000000043fb60                ST_drawWidgets
-                0x000000000043fc80                ST_doRefresh
-                0x000000000043fd20                ST_diffDraw
-                0x000000000043fd30                ST_Drawer
-                0x000000000043fe30                ST_loadGraphics
-                0x000000000043fe40                ST_loadData
-                0x000000000043fe60                ST_unloadGraphics
-                0x000000000043fe70                ST_unloadData
-                0x000000000043fe80                ST_initData
-                0x000000000043ff30                ST_createWidgets
-                0x00000000004402f0                ST_Start
-                0x00000000004403f0                ST_Stop
-                0x0000000000440430                ST_Init
- *fill*         0x0000000000440466        0xa 
- .text          0x0000000000440470      0xb51 build/s_sound.o
-                0x0000000000440470                S_Shutdown
-                0x00000000004405d0                S_Init
-                0x00000000004406c0                S_StopSound
-                0x0000000000440730                S_StartSound
-                0x0000000000440b00                S_PauseSound
-                0x0000000000440b30                S_ResumeSound
-                0x0000000000440b60                S_UpdateSounds
-                0x0000000000440c90                S_SetMusicVolume
-                0x0000000000440cc0                S_SetSfxVolume
-                0x0000000000440cf0                S_ChangeMusic
-                0x0000000000440e40                S_Start
-                0x0000000000440f30                S_StartMusic
-                0x0000000000440f40                S_MusicPlaying
-                0x0000000000440f50                S_StopMusic
- *fill*         0x0000000000440fc1        0xf 
- .text          0x0000000000440fd0       0x29 build/tables.o
-                0x0000000000440fd0                SlopeDiv
- *fill*         0x0000000000440ff9        0x7 
- .text          0x0000000000441000     0x1ae1 build/v_video.o
-                0x0000000000441000                V_MarkRect
-                0x0000000000441060                V_CopyRect
-                0x00000000004411a0                V_SetPatchClipCallback
-                0x00000000004411b0                V_DrawPatch
-                0x0000000000441660                V_DrawPatchFlipped
-                0x0000000000441b10                V_DrawPatchDirect
-                0x0000000000441b20                V_DrawTLPatch
-                0x0000000000441c30                V_DrawXlaPatch
-                0x0000000000441d30                V_DrawAltTLPatch
-                0x0000000000441e40                V_DrawShadowedPatch
-                0x0000000000441f80                V_LoadTintTable
-                0x0000000000441fa0                V_LoadXlaTable
-                0x0000000000441fc0                V_DrawBlock
-                0x00000000004420a0                V_DrawFilledBox
-                0x0000000000442100                V_DrawHorizLine
-                0x0000000000442140                V_DrawVertLine
-                0x0000000000442180                V_DrawBox
-                0x0000000000442280                V_DrawRawScreen
-                0x00000000004422a0                V_Init
-                0x00000000004422b0                V_UseBuffer
-                0x00000000004422c0                V_RestoreBuffer
-                0x00000000004422d0                WritePCXfile
-                0x0000000000442440                V_ScreenShot
-                0x00000000004425f0                V_DrawMouseSpeedBox
- *fill*         0x0000000000442ae1        0xf 
- .text          0x0000000000442af0     0x53f9 build/wi_stuff.o
-                0x00000000004436a0                WI_slamBackground
-                0x00000000004436b0                WI_Responder
-                0x00000000004436c0                WI_drawLF
-                0x0000000000443790                WI_drawEL
-                0x0000000000443800                WI_drawOnLnode
-                0x00000000004438c0                WI_initAnimatedBack
-                0x00000000004438f0                WI_updateAnimatedBack
-                0x0000000000443920                WI_drawAnimatedBack
-                0x00000000004439b0                WI_drawNum
-                0x0000000000443b10                WI_drawPercent
-                0x0000000000443bf0                WI_drawTime
-                0x0000000000443d30                WI_End
-                0x0000000000443d40                WI_initNoState
-                0x0000000000443d60                WI_updateNoState
-                0x0000000000443da0                WI_initShowNextLoc
-                0x0000000000443df0                WI_updateShowNextLoc
-                0x0000000000443e70                WI_drawShowNextLoc
-                0x0000000000444090                WI_drawNoState
-                0x00000000004440a0                WI_fragSum
-                0x0000000000444120                WI_initDeathmatchStats
-                0x0000000000444540                WI_updateDeathmatchStats
-                0x0000000000444ea0                WI_drawDeathmatchStats
-                0x0000000000445730                WI_initNetgameStats
-                0x0000000000445970                WI_updateNetgameStats
-                0x0000000000446260                WI_drawNetgameStats
-                0x00000000004468b0                WI_initStats
-                0x0000000000446930                WI_updateStats
-                0x0000000000446db0                WI_drawStats
-                0x00000000004471c0                WI_checkForAccelerate
-                0x0000000000447410                WI_Ticker
-                0x00000000004477d0                WI_loadData
-                0x0000000000447860                WI_unloadData
-                0x0000000000447870                WI_Drawer
-                0x00000000004478d0                WI_initVariables
-                0x0000000000447950                WI_Start
- *fill*         0x0000000000447ee9        0x7 
- .text          0x0000000000447ef0      0x12c build/w_checksum.o
-                0x0000000000447ef0                W_Checksum
- *fill*         0x000000000044801c        0x4 
- .text          0x0000000000448020       0x36 build/w_file.o
-                0x0000000000448020                W_OpenFile
-                0x0000000000448040                W_CloseFile
-                0x0000000000448050                W_Read
- *fill*         0x0000000000448056        0xa 
- .text          0x0000000000448060       0x86 build/w_main.o
-                0x0000000000448060                W_ParseCommandLine
- *fill*         0x00000000004480e6        0xa 
- .text          0x00000000004480f0      0xde5 build/w_wad.o
-                0x00000000004480f0                W_LumpNameHash
-                0x0000000000448200                W_AddFile
-                0x00000000004484d0                W_NumLumps
-                0x00000000004484e0                W_CheckNumForName
-                0x00000000004486c0                W_GetNumForName
-                0x0000000000448710                W_LumpLength
-                0x0000000000448740                W_ReadLump
-                0x00000000004487c0                W_CacheLumpNum
-                0x0000000000448920                W_CacheLumpName
-                0x0000000000448ab0                W_ReleaseLumpNum
-                0x0000000000448b10                W_ReleaseLumpName
-                0x0000000000448ba0                W_GenerateHashTable
-                0x0000000000448d40                W_CheckCorrectIWAD
- *fill*         0x0000000000448ed5        0xb 
- .text          0x0000000000448ee0      0x70a build/z_zone.o
-                0x0000000000448ee0                Z_ClearZone
-                0x0000000000448f30                Z_Init
-                0x0000000000448fa0                Z_Free
-                0x0000000000449080                Z_Malloc
-                0x00000000004491f0                Z_FreeTags
-                0x0000000000449260                Z_DumpHeap
-                0x0000000000449350                Z_FileDumpHeap
-                0x0000000000449450                Z_CheckHeap
-                0x00000000004494f0                Z_ChangeTag2
-                0x0000000000449560                Z_ChangeUser
-                0x0000000000449590                Z_FreeMemory
-                0x00000000004495e0                Z_ZoneSize
- *fill*         0x00000000004495ea        0x6 
- .text          0x00000000004495f0       0xb9 build/w_file_stdc.o
-                0x00000000004495f0                W_StdC_Read
- *fill*         0x00000000004496a9        0x7 
- .text          0x00000000004496b0       0xd1 build/i_input.o
-                0x00000000004496b0                I_GetEvent
-                0x0000000000449780                I_InitInput
- *fill*         0x0000000000449781        0xf 
- .text          0x0000000000449790      0x671 build/i_video.o
-                0x0000000000449790                cmap_to_rgb565
-                0x0000000000449800                cmap_to_fb
-                0x0000000000449900                I_InitGraphics
-                0x0000000000449a90                I_ShutdownGraphics
-                0x0000000000449aa0                I_StartFrame
-                0x0000000000449ab0                I_StartTic
-                0x0000000000449ac0                I_UpdateNoBlit
-                0x0000000000449ad0                I_FinishUpdate
-                0x0000000000449c90                I_ReadScreen
-                0x0000000000449cb0                I_SetPalette
-                0x0000000000449d20                I_GetPaletteIndex
-                0x0000000000449d80                I_BeginRead
-                0x0000000000449d90                I_EndRead
-                0x0000000000449da0                I_SetWindowTitle
-                0x0000000000449db0                I_GraphicsCheckCommandLine
-                0x0000000000449dc0                I_SetGrabMouseCallback
-                0x0000000000449dd0                I_EnableLoadingDisk
-                0x0000000000449de0                I_BindVideoVariables
-                0x0000000000449df0                I_DisplayFPSDots
-                0x0000000000449e00                I_CheckIsScreensaver
- *fill*         0x0000000000449e01        0xf 
- .text          0x0000000000449e10       0x20 build/doomgeneric.o
-                0x0000000000449e10                dg_Create
- .text          0x0000000000449e30      0x37a build/doomgeneric_cword.o
-                0x0000000000449e30                disableRawMode
-                0x0000000000449e50                enableRawMode
-                0x0000000000449ed0                DG_Init
-                0x000000000044a0a0                DG_DrawFrame
-                0x000000000044a150                DG_SleepMs
-                0x000000000044a160                DG_GetTicksMs
-                0x000000000044a170                DG_GetKey
-                0x000000000044a1a0                DG_SetWindowTitle
- .text          0x000000000044a1aa        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtend.o
- .text          0x000000000044a1aa        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtn.o
+                0x0000000000405520                D_RegisterLoopCallbacks
+ *fill*         0x0000000000405528        0x8 
+ .text          0x0000000000405530     0x19d7 build/d_main.o
+                0x0000000000405530                D_GrabMouseCallback
+                0x0000000000405a00                D_ProcessEvents
+                0x0000000000405a50                D_Display
+                0x0000000000405a70                D_BindVariables
+                0x0000000000405b90                D_DoomLoop
+                0x0000000000405c80                D_PageTicker
+                0x0000000000405ca0                D_PageDrawer
+                0x0000000000405cd0                D_AdvanceDemo
+                0x0000000000405ce0                D_DoAdvanceDemo
+                0x0000000000405f40                D_StartTitle
+                0x0000000000405f60                D_IdentifyVersion
+                0x0000000000406160                D_SetGameDescription
+                0x0000000000406250                PrintDehackedBanners
+                0x0000000000406260                PrintGameVersion
+                0x00000000004062e0                D_DoomMain
+ *fill*         0x0000000000406f07        0x9 
+ .text          0x0000000000406f10      0x3f5 build/d_mode.o
+                0x0000000000406f10                D_ValidGameMode
+                0x0000000000406fa0                D_ValidEpisodeMap
+                0x0000000000407150                D_GetNumEpisodes
+                0x0000000000407240                D_ValidGameVersion
+                0x00000000004072c0                D_IsEpisodeMap
+                0x00000000004072f0                D_GameMissionString
+ *fill*         0x0000000000407305        0xb 
+ .text          0x0000000000407310      0x584 build/d_net.o
+                0x0000000000407560                D_ConnectNetGame
+                0x0000000000407640                D_CheckNetGame
+ *fill*         0x0000000000407894        0xc 
+ .text          0x00000000004078a0     0x1ed7 build/f_finale.o
+                0x00000000004078a0                F_StartFinale
+                0x0000000000407b80                F_Responder
+                0x0000000000407c30                F_Ticker
+                0x0000000000408210                F_TextWrite
+                0x0000000000408360                F_StartCast
+                0x00000000004083f0                F_CastTicker
+                0x0000000000408880                F_CastResponder
+                0x0000000000408920                F_CastPrint
+                0x0000000000408a10                F_CastDrawer
+                0x0000000000408ab0                F_DrawPatchCol
+                0x0000000000408e10                F_BunnyScroll
+                0x00000000004096e0                F_Drawer
+ *fill*         0x0000000000409777        0x9 
+ .text          0x0000000000409780      0x7f6 build/f_wipe.o
+                0x0000000000409780                wipe_doColorXForm
+                0x0000000000409810                wipe_exitColorXForm
+                0x0000000000409820                wipe_doMelt
+                0x00000000004099e0                wipe_initColorXForm
+                0x0000000000409a10                wipe_exitMelt
+                0x0000000000409a40                wipe_initMelt
+                0x0000000000409da0                wipe_shittyColMajorXform
+                0x0000000000409e40                wipe_StartScreen
+                0x0000000000409e70                wipe_EndScreen
+                0x0000000000409ed0                wipe_ScreenWipe
+ *fill*         0x0000000000409f76        0xa 
+ .text          0x0000000000409f80     0x3d13 build/g_game.o
+                0x0000000000409f80                G_CmdChecksum
+                0x0000000000409f90                G_BuildTiccmd
+                0x000000000040ab80                G_DoLoadLevel
+                0x000000000040ad60                G_Responder
+                0x000000000040b540                G_InitPlayer
+                0x000000000040b5e0                G_PlayerFinishLevel
+                0x000000000040b640                G_PlayerReborn
+                0x000000000040b6e0                G_CheckSpot
+                0x000000000040ba10                G_DeathMatchSpawnPlayer
+                0x000000000040bae0                G_DoReborn
+                0x000000000040bc40                G_ScreenShot
+                0x000000000040bc50                G_ExitLevel
+                0x000000000040bc70                G_SecretExitLevel
+                0x000000000040bcc0                G_DoCompleted
+                0x000000000040c400                G_WorldDone
+                0x000000000040c470                G_DoWorldDone
+                0x000000000040c4b0                G_LoadGame
+                0x000000000040c4e0                G_SaveGame
+                0x000000000040c510                G_DoSaveGame
+                0x000000000040c6e0                G_DeferedInitNew
+                0x000000000040c700                G_InitNew
+                0x000000000040ca20                G_DoLoadGame
+                0x000000000040cb00                G_DoNewGame
+                0x000000000040cb90                G_RecordDemo
+                0x000000000040cc50                G_VanillaVersionCode
+                0x000000000040ccb0                G_BeginRecording
+                0x000000000040cea0                G_DeferedPlayDemo
+                0x000000000040cec0                G_DoPlayDemo
+                0x000000000040d1f0                G_TimeDemo
+                0x000000000040d230                G_CheckDemoStatus
+                0x000000000040d3d0                G_ReadDemoTiccmd
+                0x000000000040d460                G_WriteDemoTiccmd
+                0x000000000040d5b0                G_Ticker
+ *fill*         0x000000000040dc93        0xd 
+ .text          0x000000000040dca0      0xb36 build/hu_lib.o
+                0x000000000040dca0                HUlib_init
+                0x000000000040dcb0                HUlib_clearTextLine
+                0x000000000040dcd0                HUlib_initTextLine
+                0x000000000040dcf0                HUlib_addCharToTextLine
+                0x000000000040dd20                HUlib_delCharFromTextLine
+                0x000000000040dd50                HUlib_drawTextLine
+                0x000000000040de40                HUlib_eraseTextLine
+                0x000000000040df20                HUlib_initSText
+                0x000000000040e020                HUlib_addLineToSText
+                0x000000000040e0b0                HUlib_addMessageToSText
+                0x000000000040e200                HUlib_drawSText
+                0x000000000040e330                HUlib_eraseSText
+                0x000000000040e4b0                HUlib_initIText
+                0x000000000040e4f0                HUlib_delCharFromIText
+                0x000000000040e520                HUlib_eraseLineFromIText
+                0x000000000040e560                HUlib_resetIText
+                0x000000000040e580                HUlib_addPrefixToIText
+                0x000000000040e5e0                HUlib_keyInIText
+                0x000000000040e670                HUlib_drawIText
+                0x000000000040e690                HUlib_eraseIText
+ *fill*         0x000000000040e7d6        0xa 
+ .text          0x000000000040e7e0      0xf4c build/hu_stuff.o
+                0x000000000040e7e0                HU_Init
+                0x000000000040e830                HU_Stop
+                0x000000000040e840                HU_Start
+                0x000000000040ea60                HU_Drawer
+                0x000000000040eaa0                HU_Erase
+                0x000000000040ead0                HU_Ticker
+                0x000000000040efd0                HU_queueChatChar
+                0x000000000040f010                HU_dequeueChatChar
+                0x000000000040f040                HU_Responder
+ .text          0x000000000040f72c        0x0 build/info.o
+ *fill*         0x000000000040f72c        0x4 
+ .text          0x000000000040f730       0x83 build/i_cdmus.o
+                0x000000000040f730                I_CDMusInit
+                0x000000000040f740                I_CDMusPrintStartup
+                0x000000000040f750                I_CDMusPlay
+                0x000000000040f760                I_CDMusStop
+                0x000000000040f770                I_CDMusResume
+                0x000000000040f780                I_CDMusSetVolume
+                0x000000000040f790                I_CDMusFirstTrack
+                0x000000000040f7a0                I_CDMusLastTrack
+                0x000000000040f7b0                I_CDMusTrackLength
+ *fill*         0x000000000040f7b3        0xd 
+ .text          0x000000000040f7c0        0x1 build/i_endoom.o
+                0x000000000040f7c0                I_Endoom
+ *fill*         0x000000000040f7c1        0xf 
+ .text          0x000000000040f7d0       0xec build/i_joystick.o
+                0x000000000040f7d0                I_ShutdownJoystick
+                0x000000000040f7e0                I_InitJoystick
+                0x000000000040f7f0                I_UpdateJoystick
+                0x000000000040f800                I_BindJoystickVariables
+ *fill*         0x000000000040f8bc        0x4 
+ .text          0x000000000040f8c0     0x39b5 build/i_scale.o
+                0x00000000004131e0                I_InitScale
+                0x0000000000413200                I_ResetScaleTables
+ *fill*         0x0000000000413275        0xb 
+ .text          0x0000000000413280      0x3a1 build/i_sound.o
+                0x0000000000413280                I_InitSound
+                0x0000000000413320                I_ShutdownSound
+                0x0000000000413380                I_GetSfxLumpNum
+                0x00000000004133a0                I_UpdateSound
+                0x0000000000413400                I_UpdateSoundParams
+                0x0000000000413440                I_StartSound
+                0x0000000000413490                I_StopSound
+                0x00000000004134b0                I_SoundIsPlaying
+                0x00000000004134d0                I_PrecacheSounds
+                0x0000000000413500                I_InitMusic
+                0x0000000000413510                I_ShutdownMusic
+                0x0000000000413520                I_SetMusicVolume
+                0x0000000000413540                I_PauseSong
+                0x0000000000413560                I_ResumeSong
+                0x0000000000413580                I_RegisterSong
+                0x00000000004135a0                I_UnRegisterSong
+                0x00000000004135c0                I_PlaySong
+                0x00000000004135e0                I_StopSong
+                0x0000000000413600                I_MusicIsPlaying
+                0x0000000000413620                I_BindSoundVariables
+ *fill*         0x0000000000413621        0xf 
+ .text          0x0000000000413630      0x6c0 build/i_system.o
+                0x0000000000413630                I_AtExit
+                0x0000000000413670                I_Tactile
+                0x0000000000413680                I_PrintBanner
+                0x00000000004136c0                I_PrintDivider
+                0x00000000004136f0                I_PrintStartupBanner
+                0x00000000004137b0                I_ConsoleStdout
+                0x00000000004137c0                I_Quit
+                0x00000000004137e0                I_Error
+                0x0000000000413a70                I_ZoneBase
+                0x0000000000413af0                I_GetMemoryValue
+ .text          0x0000000000413cf0       0xa1 build/i_timer.o
+                0x0000000000413cf0                I_GetTicks
+                0x0000000000413d00                I_GetTime
+                0x0000000000413d40                I_GetTimeMS
+                0x0000000000413d70                I_Sleep
+                0x0000000000413d80                I_WaitVBL
+                0x0000000000413d90                I_InitTimer
+ *fill*         0x0000000000413d91        0xf 
+ .text          0x0000000000413da0      0x282 build/memio.o
+                0x0000000000413da0                mem_fopen_read
+                0x0000000000413de0                mem_fread
+                0x0000000000413e60                mem_fopen_write
+                0x0000000000413ec0                mem_fwrite
+                0x0000000000413f80                mem_get_buf
+                0x0000000000413f90                mem_fclose
+                0x0000000000413fc0                mem_ftell
+                0x0000000000413fd0                mem_fseek
+ *fill*         0x0000000000414022        0xe 
+ .text          0x0000000000414030      0x19a build/m_argv.o
+                0x0000000000414030                M_CheckParmWithArgs
+                0x00000000004140a0                M_ParmExists
+                0x0000000000414120                M_CheckParm
+                0x0000000000414190                M_FindResponseFile
+                0x00000000004141a0                M_GetExecutableName
+ *fill*         0x00000000004141ca        0x6 
+ .text          0x00000000004141d0       0x3c build/m_bbox.o
+                0x00000000004141d0                M_ClearBox
+                0x00000000004141e0                M_AddToBox
+ *fill*         0x000000000041420c        0x4 
+ .text          0x0000000000414210       0xd3 build/m_cheat.o
+                0x0000000000414210                cht_CheckCheat
+                0x00000000004142d0                cht_GetParam
+ *fill*         0x00000000004142e3        0xd 
+ .text          0x00000000004142f0      0x4c5 build/m_config.o
+                0x00000000004143b0                M_SetConfigFilenames
+                0x00000000004143c0                M_SaveDefaults
+                0x00000000004143d0                M_SaveDefaultsAlternate
+                0x00000000004143e0                M_LoadDefaults
+                0x00000000004144c0                M_BindVariable
+                0x00000000004144e0                M_SetVariable
+                0x0000000000414650                M_GetIntVariable
+                0x0000000000414680                M_GetStrVariable
+                0x00000000004146c0                M_GetFloatVariable
+                0x0000000000414700                M_SetConfigDir
+                0x0000000000414760                M_GetSaveGameDir
+ *fill*         0x00000000004147b5        0xb 
+ .text          0x00000000004147c0      0x7a1 build/m_controls.o
+                0x00000000004147c0                M_BindBaseControls
+                0x0000000000414960                M_BindHereticControls
+                0x00000000004149f0                M_BindHexenControls
+                0x0000000000414aa0                M_BindStrifeControls
+                0x0000000000414be0                M_BindWeaponControls
+                0x0000000000414cc0                M_BindMapControls
+                0x0000000000414d80                M_BindMenuControls
+                0x0000000000414f00                M_BindChatControls
+                0x0000000000414f60                M_ApplyPlatformDefaults
+ *fill*         0x0000000000414f61        0xf 
+ .text          0x0000000000414f70       0x60 build/m_fixed.o
+                0x0000000000414f70                FixedMul
+                0x0000000000414f90                FixedDiv
+ .text          0x0000000000414fd0     0x3464 build/m_menu.o
+                0x0000000000414fd0                M_Sound
+                0x0000000000414ff0                M_Options
+                0x0000000000415010                M_ChangeMessages
+                0x0000000000415070                M_ReadThis
+                0x0000000000415090                M_FinishReadThis
+                0x00000000004150b0                M_DrawReadThis2
+                0x00000000004150e0                M_DrawMainMenu
+                0x0000000000415110                M_DrawNewGame
+                0x0000000000415160                M_DrawEpisode
+                0x0000000000415190                M_LoadSelect
+                0x00000000004151d0                M_SaveSelect
+                0x0000000000415280                M_QuitDOOM
+                0x0000000000415310                M_DrawReadThis1
+                0x0000000000415400                M_SfxVol
+                0x0000000000415450                M_MusicVol
+                0x00000000004154a0                M_ChangeDetail
+                0x0000000000415510                M_SizeDisplay
+                0x0000000000415580                M_ChangeSensitivity
+                0x00000000004155c0                M_QuickSaveResponse
+                0x0000000000415620                M_VerifyNightmare
+                0x0000000000415660                M_ChooseSkill
+                0x00000000004156e0                M_EndGameResponse
+                0x0000000000415720                M_NewGame
+                0x00000000004157d0                M_Episode
+                0x00000000004158a0                M_ReadThis2
+                0x00000000004159a0                M_DrawSound
+                0x0000000000415a10                M_DrawOptions
+                0x0000000000415c00                M_EndGame
+                0x0000000000415ca0                M_QuickLoadResponse
+                0x0000000000415d00                M_QuitResponse
+                0x0000000000415d70                M_DrawLoad
+                0x0000000000415ef0                M_DrawSave
+                0x0000000000416180                M_LoadGame
+                0x00000000004162b0                M_SaveGame
+                0x0000000000416400                M_ReadSaveStrings
+                0x00000000004164c0                M_DrawSaveLoadBorder
+                0x0000000000416540                M_DoSave
+                0x0000000000416580                M_QuickSave
+                0x0000000000416750                M_QuickLoad
+                0x0000000000416870                M_DrawThermo
+                0x0000000000416940                M_DrawEmptyCell
+                0x0000000000416980                M_DrawSelCell
+                0x00000000004169c0                M_StartMessage
+                0x0000000000416a00                M_StopMessage
+                0x0000000000416a20                M_StringWidth
+                0x0000000000416a90                M_StringHeight
+                0x0000000000416d60                M_WriteText
+                0x0000000000416df0                M_Responder
+                0x0000000000417cb0                M_StartControlPanel
+                0x0000000000417ce0                M_Drawer
+                0x0000000000418300                M_ClearMenus
+                0x0000000000418310                M_SetupNextMenu
+                0x0000000000418330                M_Ticker
+                0x0000000000418370                M_Init
+ *fill*         0x0000000000418434        0xc 
+ .text          0x0000000000418440      0x9c6 build/m_misc.o
+                0x0000000000418440                M_MakeDirectory
+                0x0000000000418450                M_FileExists
+                0x00000000004184a0                M_FileLength
+                0x00000000004184f0                M_WriteFile
+                0x0000000000418540                M_ReadFile
+                0x0000000000418620                M_StrToInt
+                0x00000000004186b0                M_ExtractFileBase
+                0x0000000000418800                M_ForceUppercase
+                0x0000000000418830                M_StrCaseStr
+                0x00000000004188a0                M_StringDuplicate
+                0x00000000004188f0                M_StringReplace
+                0x0000000000418a10                M_StringCopy
+                0x0000000000418a50                M_StringConcat
+                0x0000000000418ac0                M_StringStartsWith
+                0x0000000000418b00                M_StringEndsWith
+                0x0000000000418b50                M_StringJoin
+                0x0000000000418ce0                M_TempFile
+                0x0000000000418d00                M_vsnprintf
+                0x0000000000418d40                M_snprintf
+ *fill*         0x0000000000418e06        0xa 
+ .text          0x0000000000418e10       0x55 build/m_random.o
+                0x0000000000418e10                P_Random
+                0x0000000000418e30                M_Random
+                0x0000000000418e50                M_ClearRandom
+ *fill*         0x0000000000418e65        0xb 
+ .text          0x0000000000418e70      0x536 build/p_ceilng.o
+                0x0000000000418e70                T_MoveCeiling
+                0x0000000000419080                EV_DoCeiling
+                0x0000000000419280                P_AddActiveCeiling
+                0x00000000004192c0                P_RemoveActiveCeiling
+                0x0000000000419300                P_ActivateInStasisCeiling
+                0x0000000000419350                EV_CeilingCrushStop
+ *fill*         0x00000000004193a6        0xa 
+ .text          0x00000000004193b0      0x835 build/p_doors.o
+                0x00000000004193b0                T_VerticalDoor
+                0x0000000000419560                EV_DoDoor
+                0x0000000000419760                EV_DoLockedDoor
+                0x0000000000419850                EV_VerticalDoor
+                0x0000000000419b10                P_SpawnDoorCloseIn30
+                0x0000000000419b70                P_SpawnDoorRaiseIn5Mins
+ *fill*         0x0000000000419be5        0xb 
+ .text          0x0000000000419bf0     0x3953 build/p_enemy.o
+                0x0000000000419bf0                PIT_VileCheck
+                0x0000000000419e90                P_RecursiveSound
+                0x000000000041a030                P_NoiseAlert
+                0x000000000041a100                P_CheckMeleeRange
+                0x000000000041a170                P_CheckMissileRange
+                0x000000000041a2a0                P_Move
+                0x000000000041a400                P_TryWalk
+                0x000000000041a560                P_NewChaseDir
+                0x000000000041aa70                P_LookForPlayers
+                0x000000000041abd0                A_KeenDie
+                0x000000000041ac50                A_Look
+                0x000000000041ad60                A_Chase
+                0x000000000041b180                A_FaceTarget
+                0x000000000041b200                A_PosAttack
+                0x000000000041b2f0                A_SPosAttack
+                0x000000000041b410                A_CPosAttack
+                0x000000000041b520                A_CPosRefire
+                0x000000000041b5e0                A_SpidRefire
+                0x000000000041b6a0                A_BspiAttack
+                0x000000000041b720                A_TroopAttack
+                0x000000000041b850                A_SargAttack
+                0x000000000041b950                A_HeadAttack
+                0x000000000041ba90                A_CyberAttack
+                0x000000000041bb10                A_BruisAttack
+                0x000000000041bbd0                A_SkelMissile
+                0x000000000041bc80                A_Tracer
+                0x000000000041be10                A_SkelWhoosh
+                0x000000000041be90                A_SkelFist
+                0x000000000041bfa0                A_VileChase
+                0x000000000041c180                A_VileStart
+                0x000000000041c190                A_StartFire
+                0x000000000041c250                A_FireCrackle
+                0x000000000041c310                A_Fire
+                0x000000000041c3c0                A_VileTarget
+                0x000000000041c470                A_VileAttack
+                0x000000000041c5d0                A_FatRaise
+                0x000000000041c640                A_FatAttack1
+                0x000000000041c740                A_FatAttack2
+                0x000000000041c840                A_FatAttack3
+                0x000000000041c980                A_SkullAttack
+                0x000000000041cb70                A_PainShootSkull
+                0x000000000041cbd0                A_PainAttack
+                0x000000000041ccb0                A_PainDie
+                0x000000000041ce10                A_Scream
+                0x000000000041ceb0                A_XScream
+                0x000000000041cec0                A_Pain
+                0x000000000041cee0                A_Fall
+                0x000000000041cef0                A_Explode
+                0x000000000041cf10                A_BossDeath
+                0x000000000041d180                A_Hoof
+                0x000000000041d1a0                A_Metal
+                0x000000000041d1c0                A_BabyMetal
+                0x000000000041d1e0                A_OpenShotgun2
+                0x000000000041d1f0                A_LoadShotgun2
+                0x000000000041d200                A_CloseShotgun2
+                0x000000000041d230                A_BrainAwake
+                0x000000000041d2c0                A_BrainPain
+                0x000000000041d2d0                A_BrainScream
+                0x000000000041d390                A_BrainExplode
+                0x000000000041d420                A_BrainDie
+                0x000000000041d430                A_BrainSpit
+                0x000000000041d4d0                A_SpawnSound
+                0x000000000041d500                A_SpawnFly
+                0x000000000041d520                A_PlayerScream
+ *fill*         0x000000000041d543        0xd 
+ .text          0x000000000041d550      0x954 build/p_floor.o
+                0x000000000041d550                T_MoveFloor
+                0x000000000041d6f0                T_MovePlane
+                0x000000000041d880                EV_DoFloor
+                0x000000000041dce0                EV_BuildStairs
+ *fill*         0x000000000041dea4        0xc 
+ .text          0x000000000041deb0     0x169a build/p_inter.o
+                0x000000000041deb0                P_GiveAmmo
+                0x000000000041e040                P_GiveWeapon
+                0x000000000041e300                P_GiveBody
+                0x000000000041e340                P_GiveArmor
+                0x000000000041e360                P_GiveCard
+                0x000000000041e380                P_GivePower
+                0x000000000041e450                P_TouchSpecialThing
+                0x000000000041efb0                P_KillMobj
+                0x000000000041f1b0                P_DamageMobj
+ *fill*         0x000000000041f54a        0x6 
+ .text          0x000000000041f550      0x54b build/p_lights.o
+                0x000000000041f550                T_StrobeFlash
+                0x000000000041f580                T_Glow
+                0x000000000041f5e0                T_FireFlicker
+                0x000000000041f630                T_LightFlash
+                0x000000000041f690                P_SpawnFireFlicker
+                0x000000000041f6f0                P_SpawnLightFlash
+                0x000000000041f760                P_SpawnStrobeFlash
+                0x000000000041f810                EV_StartLightStrobing
+                0x000000000041f8e0                EV_TurnTagLightsOff
+                0x000000000041f990                EV_LightTurnOn
+                0x000000000041fa40                P_SpawnGlowingLight
+ *fill*         0x000000000041fa9b        0x5 
+ .text          0x000000000041faa0     0x1900 build/p_map.o
+                0x000000000041faa0                PIT_CheckThing
+                0x000000000041fcb0                PTR_SlideTraverse
+                0x000000000041fd90                PTR_AimTraverse
+                0x000000000041ff50                PTR_ShootTraverse
+                0x0000000000420250                PIT_StompThing
+                0x00000000004202f0                PIT_CheckLine
+                0x00000000004204e0                PTR_UseTraverse
+                0x0000000000420560                PIT_RadiusAttack
+                0x0000000000420850                P_TeleportMove
+                0x00000000004209f0                P_CheckPosition
+                0x0000000000420bc0                PIT_ChangeSector
+                0x0000000000420d20                P_TryMove
+                0x0000000000420d60                P_ThingHeightClip
+                0x0000000000420dd0                P_HitSlideLine
+                0x0000000000420e10                P_SlideMove
+                0x0000000000421110                P_AimLineAttack
+                0x00000000004211c0                P_LineAttack
+                0x0000000000421240                P_UseLines
+                0x0000000000421290                P_RadiusAttack
+                0x0000000000421330                P_ChangeSector
+ .text          0x00000000004213a0     0x1732 build/p_maputl.o
+                0x00000000004213a0                P_AproxDistance
+                0x00000000004213d0                P_PointOnLineSide
+                0x0000000000421460                P_BoxOnLineSide
+                0x00000000004216f0                P_PointOnDivlineSide
+                0x00000000004217a0                P_MakeDivline
+                0x00000000004217c0                P_InterceptVector
+                0x0000000000421850                P_LineOpening
+                0x00000000004218b0                P_UnsetThingPosition
+                0x0000000000421960                P_SetThingPosition
+                0x0000000000421a20                P_BlockLinesIterator
+                0x0000000000421ad0                P_BlockThingsIterator
+                0x0000000000421b50                PIT_AddLineIntercepts
+                0x0000000000422150                PIT_AddThingIntercepts
+                0x00000000004225a0                P_TraverseIntercepts
+                0x0000000000422630                P_PathTraverse
+ *fill*         0x0000000000422ad2        0xe 
+ .text          0x0000000000422ae0     0x1d53 build/p_mobj.o
+                0x0000000000422ae0                P_SetMobjState
+                0x0000000000422c20                P_ExplodeMissile
+                0x0000000000422dc0                P_XYMovement
+                0x00000000004232e0                P_ZMovement
+                0x0000000000423570                P_SpawnMobj
+                0x00000000004236f0                P_NightmareRespawn
+                0x00000000004238a0                P_MobjThinker
+                0x0000000000423c30                P_RemoveMobj
+                0x0000000000423cd0                P_RespawnSpecials
+                0x0000000000423e30                P_SpawnPlayer
+                0x0000000000423fb0                P_SpawnMapThing
+                0x0000000000424210                P_SpawnPuff
+                0x00000000004242b0                P_SpawnBlood
+                0x0000000000424450                P_CheckMissileSpawn
+                0x00000000004244c0                P_SubstNullMobj
+                0x0000000000424500                P_SpawnMissile
+                0x00000000004246a0                P_SpawnPlayerMissile
+ *fill*         0x0000000000424833        0xd 
+ .text          0x0000000000424840      0x5fd build/p_plats.o
+                0x0000000000424840                T_PlatRaise
+                0x0000000000424a40                EV_DoPlat
+                0x0000000000424d10                P_ActivateInStasis
+                0x0000000000424d60                EV_StopPlat
+                0x0000000000424db0                P_AddActivePlat
+                0x0000000000424df0                P_RemoveActivePlat
+ *fill*         0x0000000000424e3d        0x3 
+ .text          0x0000000000424e40     0x1f52 build/p_pspr.o
+                0x0000000000424e40                P_SetPsprite
+                0x0000000000424f20                P_CalcSwing
+                0x0000000000424f80                P_BringUpWeapon
+                0x0000000000425070                P_CheckAmmo
+                0x00000000004252e0                P_FireWeapon
+                0x00000000004253c0                P_DropWeapon
+                0x0000000000425460                A_WeaponReady
+                0x00000000004256e0                A_ReFire
+                0x0000000000425a40                A_CheckReload
+                0x0000000000425ca0                A_Lower
+                0x0000000000425dd0                A_Raise
+                0x0000000000425e90                A_GunFlash
+                0x0000000000425f40                A_Punch
+                0x0000000000426010                A_Saw
+                0x0000000000426140                A_FireMissile
+                0x0000000000426170                A_FireBFG
+                0x00000000004261a0                A_FirePlasma
+                0x0000000000426270                P_BulletSlope
+                0x00000000004262e0                P_GunShot
+                0x0000000000426360                A_FirePistol
+                0x0000000000426520                A_FireShotgun
+                0x00000000004266f0                A_FireShotgun2
+                0x00000000004268c0                A_FireCGun
+                0x0000000000426ad0                A_Light0
+                0x0000000000426ae0                A_Light1
+                0x0000000000426af0                A_Light2
+                0x0000000000426b00                A_BFGSpray
+                0x0000000000426bc0                A_BFGsound
+                0x0000000000426bd0                P_SetupPsprites
+                0x0000000000426cd0                P_MovePsprites
+ *fill*         0x0000000000426d92        0xe 
+ .text          0x0000000000426da0     0xa35a build/p_saveg.o
+                0x00000000004284f0                P_TempSaveGameFile
+                0x0000000000428530                P_SaveGameFile
+                0x00000000004285c0                P_WriteSaveGameHeader
+                0x0000000000428a50                P_ReadSaveGameHeader
+                0x0000000000428e80                P_ReadSaveGameEOF
+                0x0000000000428f00                P_WriteSaveGameEOF
+                0x0000000000428f70                P_ArchivePlayers
+                0x0000000000429f70                P_UnArchivePlayers
+                0x000000000042d3e0                P_ArchiveWorld
+                0x000000000042e0a0                P_UnArchiveWorld
+                0x000000000042eda0                P_ArchiveThinkers
+                0x000000000042f500                P_UnArchiveThinkers
+                0x000000000042fca0                P_ArchiveSpecials
+                0x00000000004307d0                P_UnArchiveSpecials
+ *fill*         0x00000000004310fa        0x6 
+ .text          0x0000000000431100     0x13fc build/p_setup.o
+                0x0000000000431100                P_LoadVertexes
+                0x0000000000431210                GetSectorAtNullAddress
+                0x0000000000431270                P_LoadSegs
+                0x0000000000431470                P_LoadSubsectors
+                0x0000000000431600                P_LoadSectors
+                0x0000000000431700                P_LoadNodes
+                0x0000000000431830                P_LoadThings
+                0x0000000000431900                P_LoadLineDefs
+                0x0000000000431b20                P_LoadSideDefs
+                0x0000000000431c30                P_LoadBlockMap
+                0x0000000000431cd0                P_GroupLines
+                0x0000000000431fe0                P_SetupLevel
+                0x00000000004324e0                P_Init
+ *fill*         0x00000000004324fc        0x4 
+ .text          0x0000000000432500      0x8b6 build/p_sight.o
+                0x0000000000432500                P_DivlineSide
+                0x0000000000432580                P_InterceptVector2
+                0x0000000000432610                P_CrossSubsector
+                0x0000000000432b50                P_CrossBSPNode
+                0x0000000000432ce0                P_CheckSight
+ *fill*         0x0000000000432db6        0xa 
+ .text          0x0000000000432dc0     0x14b0 build/p_spec.o
+                0x0000000000432dc0                P_InitPicAnims
+                0x0000000000432ec0                getSide
+                0x0000000000432f00                getSector
+                0x0000000000432f40                twoSided
+                0x0000000000432f70                getNextSector
+                0x0000000000432f90                P_FindLowestFloorSurrounding
+                0x0000000000432ff0                P_FindHighestFloorSurrounding
+                0x0000000000433060                P_FindNextHighestFloor
+                0x0000000000433290                P_FindLowestCeilingSurrounding
+                0x0000000000433300                P_FindHighestCeilingSurrounding
+                0x0000000000433360                P_FindSectorFromLineTag
+                0x00000000004333c0                P_FindMinSurroundingLight
+                0x0000000000433420                P_CrossSpecialLine
+                0x0000000000433970                P_ShootSpecialLine
+                0x0000000000433a10                P_PlayerInSpecialSector
+                0x0000000000433b20                P_UpdateSpecials
+                0x0000000000433cd0                EV_DoDonut
+                0x0000000000433f90                P_SpawnSpecials
+ .text          0x0000000000434270     0x13e0 build/p_switch.o
+                0x0000000000434270                P_InitSwitchList
+                0x0000000000434340                P_StartButton
+                0x0000000000434660                P_ChangeSwitchTexture
+                0x00000000004350c0                P_UseSpecialLine
+ .text          0x0000000000435650      0x1b3 build/p_telept.o
+                0x0000000000435650                EV_Teleport
+ *fill*         0x0000000000435803        0xd 
+ .text          0x0000000000435810      0x20f build/p_tick.o
+                0x0000000000435810                P_InitThinkers
+                0x0000000000435830                P_AddThinker
+                0x0000000000435850                P_RemoveThinker
+                0x0000000000435860                P_AllocateThinker
+                0x0000000000435870                P_RunThinkers
+                0x00000000004358e0                P_Ticker
+ *fill*         0x0000000000435a1f        0x1 
+ .text          0x0000000000435a20      0x662 build/p_user.o
+                0x0000000000435a20                P_Thrust
+                0x0000000000435a70                P_CalcHeight
+                0x0000000000435bb0                P_MovePlayer
+                0x0000000000435cd0                P_DeathThink
+                0x0000000000435db0                P_PlayerThink
+ *fill*         0x0000000000436082        0xe 
+ .text          0x0000000000436090      0x7e7 build/r_bsp.o
+                0x0000000000436090                R_ClearDrawSegs
+                0x00000000004360a0                R_ClipSolidWallSegment
+                0x00000000004361e0                R_ClipPassWallSegment
+                0x0000000000436280                R_ClearClipSegs
+                0x00000000004362b0                R_AddLine
+                0x00000000004363e0                R_CheckBBox
+                0x0000000000436560                R_Subsector
+                0x00000000004367d0                R_RenderBSPNode
+ *fill*         0x0000000000436877        0x9 
+ .text          0x0000000000436880     0x1295 build/r_data.o
+                0x0000000000436880                R_DrawColumnInCache
+                0x0000000000436910                R_GenerateComposite
+                0x0000000000436b10                R_GenerateLookup
+                0x0000000000436d00                R_GetColumn
+                0x0000000000436d90                R_InitTextures
+                0x00000000004373a0                R_InitFlats
+                0x0000000000437420                R_InitSpriteLumps
+                0x0000000000437530                R_InitColormaps
+                0x0000000000437560                R_InitData
+                0x0000000000437620                R_FlatNumForName
+                0x0000000000437680                R_CheckTextureNumForName
+                0x0000000000437700                R_TextureNumForName
+                0x0000000000437790                R_PrecacheLevel
+ *fill*         0x0000000000437b15        0xb 
+ .text          0x0000000000437b20      0xf11 build/r_draw.o
+                0x0000000000437b20                R_DrawColumn
+                0x0000000000437bf0                R_DrawColumnLow
+                0x0000000000437cd0                R_DrawFuzzColumn
+                0x0000000000437de0                R_DrawFuzzColumnLow
+                0x0000000000437f40                R_DrawTranslatedColumn
+                0x0000000000438010                R_DrawTranslatedColumnLow
+                0x0000000000438120                R_InitTranslationTables
+                0x00000000004381c0                R_DrawSpan
+                0x00000000004382d0                R_DrawSpanLow
+                0x0000000000438410                R_InitBuffer
+                0x0000000000438600                R_FillBackScreen
+                0x00000000004388e0                R_VideoErase
+                0x0000000000438920                R_DrawViewBorder
+ *fill*         0x0000000000438a31        0xf 
+ .text          0x0000000000438a40      0xeed build/r_main.o
+                0x0000000000438a40                R_AddPointToBox
+                0x0000000000438a60                R_PointOnSide
+                0x0000000000438b00                R_PointOnSegSide
+                0x0000000000438bb0                R_PointToAngle
+                0x0000000000438d10                R_PointToAngle2
+                0x0000000000438e90                R_PointToDist
+                0x0000000000438f00                R_InitPointToAngle
+                0x0000000000438f10                R_ScaleFromGlobalAngle
+                0x0000000000438fa0                R_InitTables
+                0x0000000000438fb0                R_InitTextureMapping
+                0x00000000004391b0                R_InitLightTables
+                0x0000000000439250                R_SetViewSize
+                0x0000000000439270                R_ExecuteSetViewSize
+                0x00000000004395e0                R_Init
+                0x0000000000439700                R_PointInSubsector
+                0x0000000000439800                R_SetupFrame
+                0x00000000004398e0                R_RenderPlayerView
+ *fill*         0x000000000043992d        0x3 
+ .text          0x0000000000439930      0x8b3 build/r_plane.o
+                0x0000000000439930                R_InitPlanes
+                0x0000000000439940                R_MapPlane
+                0x0000000000439b00                R_ClearPlanes
+                0x0000000000439c60                R_FindPlane
+                0x0000000000439d60                R_CheckPlane
+                0x0000000000439e20                R_MakeSpans
+                0x0000000000439f50                R_DrawPlanes
+ *fill*         0x000000000043a1e3        0xd 
+ .text          0x000000000043a1f0     0x1059 build/r_segs.o
+                0x000000000043a1f0                R_RenderMaskedSegRange
+                0x000000000043a470                R_RenderSegLoop
+                0x000000000043a810                R_StoreWallRange
+ *fill*         0x000000000043b249        0x7 
+ .text          0x000000000043b250        0xb build/r_sky.o
+                0x000000000043b250                R_InitSkyMap
+ *fill*         0x000000000043b25b        0x5 
+ .text          0x000000000043b260     0x1651 build/r_things.o
+                0x000000000043b260                R_InstallSpriteLump
+                0x000000000043b430                R_InitSpriteDefs
+                0x000000000043b830                R_InitSprites
+                0x000000000043b860                R_ClearSprites
+                0x000000000043b870                R_NewVisSprite
+                0x000000000043b8a0                R_DrawMaskedColumn
+                0x000000000043b9a0                R_DrawVisSprite
+                0x000000000043baf0                R_ProjectSprite
+                0x000000000043be30                R_AddSprites
+                0x000000000043bec0                R_DrawPSprite
+                0x000000000043c120                R_DrawPlayerSprites
+                0x000000000043c1d0                R_SortVisSprites
+                0x000000000043c320                R_DrawSprite
+                0x000000000043c780                R_DrawMasked
+ *fill*         0x000000000043c8b1        0xf 
+ .text          0x000000000043c8c0     0x178b build/sha1.o
+                0x000000000043db70                SHA1_Init
+                0x000000000043db90                SHA1_Update
+                0x000000000043dd00                SHA1_Final
+                0x000000000043ded0                SHA1_UpdateInt32
+                0x000000000043e020                SHA1_UpdateString
+ .text          0x000000000043e04b        0x0 build/sounds.o
+ *fill*         0x000000000043e04b        0x5 
+ .text          0x000000000043e050       0xf1 build/statdump.o
+                0x000000000043e050                StatCopy
+                0x000000000043e140                StatDump
+ *fill*         0x000000000043e141        0xf 
+ .text          0x000000000043e150      0x4ac build/st_lib.o
+                0x000000000043e150                STlib_init
+                0x000000000043e170                STlib_initNum
+                0x000000000043e1a0                STlib_drawNum
+                0x000000000043e340                STlib_updateNum
+                0x000000000043e360                STlib_initPercent
+                0x000000000043e390                STlib_updatePercent
+                0x000000000043e3f0                STlib_initMultIcon
+                0x000000000043e420                STlib_updateMultIcon
+                0x000000000043e500                STlib_initBinIcon
+                0x000000000043e530                STlib_updateBinIcon
+ *fill*         0x000000000043e5fc        0x4 
+ .text          0x000000000043e600     0x1e76 build/st_stuff.o
+                0x000000000043ec30                ST_refreshBackground
+                0x000000000043ecc0                ST_Responder
+                0x000000000043f260                ST_calcPainOffset
+                0x000000000043f2c0                ST_updateFaceWidget
+                0x000000000043f8e0                ST_updateWidgets
+                0x000000000043fa50                ST_Ticker
+                0x000000000043fa80                ST_doPaletteStuff
+                0x000000000043fb70                ST_drawWidgets
+                0x000000000043fc90                ST_doRefresh
+                0x000000000043fd30                ST_diffDraw
+                0x000000000043fd40                ST_Drawer
+                0x000000000043fe40                ST_loadGraphics
+                0x000000000043fe50                ST_loadData
+                0x000000000043fe70                ST_unloadGraphics
+                0x000000000043fe80                ST_unloadData
+                0x000000000043fe90                ST_initData
+                0x000000000043ff40                ST_createWidgets
+                0x0000000000440300                ST_Start
+                0x0000000000440400                ST_Stop
+                0x0000000000440440                ST_Init
+ *fill*         0x0000000000440476        0xa 
+ .text          0x0000000000440480      0xb51 build/s_sound.o
+                0x0000000000440480                S_Shutdown
+                0x00000000004405e0                S_Init
+                0x00000000004406d0                S_StopSound
+                0x0000000000440740                S_StartSound
+                0x0000000000440b10                S_PauseSound
+                0x0000000000440b40                S_ResumeSound
+                0x0000000000440b70                S_UpdateSounds
+                0x0000000000440ca0                S_SetMusicVolume
+                0x0000000000440cd0                S_SetSfxVolume
+                0x0000000000440d00                S_ChangeMusic
+                0x0000000000440e50                S_Start
+                0x0000000000440f40                S_StartMusic
+                0x0000000000440f50                S_MusicPlaying
+                0x0000000000440f60                S_StopMusic
+ *fill*         0x0000000000440fd1        0xf 
+ .text          0x0000000000440fe0       0x29 build/tables.o
+                0x0000000000440fe0                SlopeDiv
+ *fill*         0x0000000000441009        0x7 
+ .text          0x0000000000441010     0x1ae1 build/v_video.o
+                0x0000000000441010                V_MarkRect
+                0x0000000000441070                V_CopyRect
+                0x00000000004411b0                V_SetPatchClipCallback
+                0x00000000004411c0                V_DrawPatch
+                0x0000000000441670                V_DrawPatchFlipped
+                0x0000000000441b20                V_DrawPatchDirect
+                0x0000000000441b30                V_DrawTLPatch
+                0x0000000000441c40                V_DrawXlaPatch
+                0x0000000000441d40                V_DrawAltTLPatch
+                0x0000000000441e50                V_DrawShadowedPatch
+                0x0000000000441f90                V_LoadTintTable
+                0x0000000000441fb0                V_LoadXlaTable
+                0x0000000000441fd0                V_DrawBlock
+                0x00000000004420b0                V_DrawFilledBox
+                0x0000000000442110                V_DrawHorizLine
+                0x0000000000442150                V_DrawVertLine
+                0x0000000000442190                V_DrawBox
+                0x0000000000442290                V_DrawRawScreen
+                0x00000000004422b0                V_Init
+                0x00000000004422c0                V_UseBuffer
+                0x00000000004422d0                V_RestoreBuffer
+                0x00000000004422e0                WritePCXfile
+                0x0000000000442450                V_ScreenShot
+                0x0000000000442600                V_DrawMouseSpeedBox
+ *fill*         0x0000000000442af1        0xf 
+ .text          0x0000000000442b00     0x53f9 build/wi_stuff.o
+                0x00000000004436b0                WI_slamBackground
+                0x00000000004436c0                WI_Responder
+                0x00000000004436d0                WI_drawLF
+                0x00000000004437a0                WI_drawEL
+                0x0000000000443810                WI_drawOnLnode
+                0x00000000004438d0                WI_initAnimatedBack
+                0x0000000000443900                WI_updateAnimatedBack
+                0x0000000000443930                WI_drawAnimatedBack
+                0x00000000004439c0                WI_drawNum
+                0x0000000000443b20                WI_drawPercent
+                0x0000000000443c00                WI_drawTime
+                0x0000000000443d40                WI_End
+                0x0000000000443d50                WI_initNoState
+                0x0000000000443d70                WI_updateNoState
+                0x0000000000443db0                WI_initShowNextLoc
+                0x0000000000443e00                WI_updateShowNextLoc
+                0x0000000000443e80                WI_drawShowNextLoc
+                0x00000000004440a0                WI_drawNoState
+                0x00000000004440b0                WI_fragSum
+                0x0000000000444130                WI_initDeathmatchStats
+                0x0000000000444550                WI_updateDeathmatchStats
+                0x0000000000444eb0                WI_drawDeathmatchStats
+                0x0000000000445740                WI_initNetgameStats
+                0x0000000000445980                WI_updateNetgameStats
+                0x0000000000446270                WI_drawNetgameStats
+                0x00000000004468c0                WI_initStats
+                0x0000000000446940                WI_updateStats
+                0x0000000000446dc0                WI_drawStats
+                0x00000000004471d0                WI_checkForAccelerate
+                0x0000000000447420                WI_Ticker
+                0x00000000004477e0                WI_loadData
+                0x0000000000447870                WI_unloadData
+                0x0000000000447880                WI_Drawer
+                0x00000000004478e0                WI_initVariables
+                0x0000000000447960                WI_Start
+ *fill*         0x0000000000447ef9        0x7 
+ .text          0x0000000000447f00      0x12c build/w_checksum.o
+                0x0000000000447f00                W_Checksum
+ *fill*         0x000000000044802c        0x4 
+ .text          0x0000000000448030       0x36 build/w_file.o
+                0x0000000000448030                W_OpenFile
+                0x0000000000448050                W_CloseFile
+                0x0000000000448060                W_Read
+ *fill*         0x0000000000448066        0xa 
+ .text          0x0000000000448070       0x86 build/w_main.o
+                0x0000000000448070                W_ParseCommandLine
+ *fill*         0x00000000004480f6        0xa 
+ .text          0x0000000000448100      0xde5 build/w_wad.o
+                0x0000000000448100                W_LumpNameHash
+                0x0000000000448210                W_AddFile
+                0x00000000004484e0                W_NumLumps
+                0x00000000004484f0                W_CheckNumForName
+                0x00000000004486d0                W_GetNumForName
+                0x0000000000448720                W_LumpLength
+                0x0000000000448750                W_ReadLump
+                0x00000000004487d0                W_CacheLumpNum
+                0x0000000000448930                W_CacheLumpName
+                0x0000000000448ac0                W_ReleaseLumpNum
+                0x0000000000448b20                W_ReleaseLumpName
+                0x0000000000448bb0                W_GenerateHashTable
+                0x0000000000448d50                W_CheckCorrectIWAD
+ *fill*         0x0000000000448ee5        0xb 
+ .text          0x0000000000448ef0      0x70a build/z_zone.o
+                0x0000000000448ef0                Z_ClearZone
+                0x0000000000448f40                Z_Init
+                0x0000000000448fb0                Z_Free
+                0x0000000000449090                Z_Malloc
+                0x0000000000449200                Z_FreeTags
+                0x0000000000449270                Z_DumpHeap
+                0x0000000000449360                Z_FileDumpHeap
+                0x0000000000449460                Z_CheckHeap
+                0x0000000000449500                Z_ChangeTag2
+                0x0000000000449570                Z_ChangeUser
+                0x00000000004495a0                Z_FreeMemory
+                0x00000000004495f0                Z_ZoneSize
+ *fill*         0x00000000004495fa        0x6 
+ .text          0x0000000000449600       0xb9 build/w_file_stdc.o
+                0x0000000000449600                W_StdC_Read
+ *fill*         0x00000000004496b9        0x7 
+ .text          0x00000000004496c0       0xd1 build/i_input.o
+                0x00000000004496c0                I_GetEvent
+                0x0000000000449790                I_InitInput
+ *fill*         0x0000000000449791        0xf 
+ .text          0x00000000004497a0      0x671 build/i_video.o
+                0x00000000004497a0                cmap_to_rgb565
+                0x0000000000449810                cmap_to_fb
+                0x0000000000449910                I_InitGraphics
+                0x0000000000449aa0                I_ShutdownGraphics
+                0x0000000000449ab0                I_StartFrame
+                0x0000000000449ac0                I_StartTic
+                0x0000000000449ad0                I_UpdateNoBlit
+                0x0000000000449ae0                I_FinishUpdate
+                0x0000000000449ca0                I_ReadScreen
+                0x0000000000449cc0                I_SetPalette
+                0x0000000000449d30                I_GetPaletteIndex
+                0x0000000000449d90                I_BeginRead
+                0x0000000000449da0                I_EndRead
+                0x0000000000449db0                I_SetWindowTitle
+                0x0000000000449dc0                I_GraphicsCheckCommandLine
+                0x0000000000449dd0                I_SetGrabMouseCallback
+                0x0000000000449de0                I_EnableLoadingDisk
+                0x0000000000449df0                I_BindVideoVariables
+                0x0000000000449e00                I_DisplayFPSDots
+                0x0000000000449e10                I_CheckIsScreensaver
+ *fill*         0x0000000000449e11        0xf 
+ .text          0x0000000000449e20       0x20 build/doomgeneric.o
+                0x0000000000449e20                dg_Create
+ .text          0x0000000000449e40      0x37a build/doomgeneric_cword.o
+                0x0000000000449e40                disableRawMode
+                0x0000000000449e60                enableRawMode
+                0x0000000000449ee0                DG_Init
+                0x000000000044a0b0                DG_DrawFrame
+                0x000000000044a160                DG_SleepMs
+                0x000000000044a170                DG_GetTicksMs
+                0x000000000044a180                DG_GetKey
+                0x000000000044a1b0                DG_SetWindowTitle
+ .text          0x000000000044a1ba        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtend.o
+ .text          0x000000000044a1ba        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtn.o
  *(.gnu.warning)
 
-.fini           0x000000000044a1aa        0x3
+.fini           0x000000000044a1ba        0x3
  *(SORT_NONE(.fini))
- .fini          0x000000000044a1aa        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crti.o
-                0x000000000044a1aa                _fini
- .fini          0x000000000044a1aa        0x3 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtn.o
+ .fini          0x000000000044a1ba        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crti.o
+                0x000000000044a1ba                _fini
+ .fini          0x000000000044a1ba        0x3 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtn.o
                 [!provide]                        PROVIDE (__etext = .)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (etext = .)
 
-.rodata         0x000000000044a1c0    0x19977
+.rodata         0x000000000044a1c0    0x19957
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.1
                 0x000000000044a1c0       0x15 build/i_main.o
@@ -1868,430 +1868,431 @@ LOAD /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.
  .rodata.str1.8
                 0x000000000044a8f0       0x28 build/d_loop.o
  .rodata.str1.1
-                0x000000000044a918       0x5d build/d_loop.o
+                0x000000000044a918       0x46 build/d_loop.o
  .rodata.str1.1
-                0x000000000044a975      0x4b3 build/d_main.o
+                0x000000000044a95e      0x4b3 build/d_main.o
                                         0x501 (size before relaxing)
+ *fill*         0x000000000044ae11        0x7 
  .rodata.str1.8
-                0x000000000044ae28      0x5a6 build/d_main.o
- *fill*         0x000000000044b3ce       0x12 
- .rodata        0x000000000044b3e0      0x170 build/d_main.o
- .rodata.cst16  0x000000000044b550       0xc0 build/d_main.o
+                0x000000000044ae18      0x5a6 build/d_main.o
+ *fill*         0x000000000044b3be        0x2 
+ .rodata        0x000000000044b3c0      0x170 build/d_main.o
+ .rodata.cst16  0x000000000044b530       0xc0 build/d_main.o
  .rodata.str1.1
-                0x000000000044b610       0x1a build/d_mode.o
+                0x000000000044b5f0       0x1a build/d_mode.o
                                          0x3c (size before relaxing)
- *fill*         0x000000000044b62a       0x16 
- .rodata        0x000000000044b640      0x130 build/d_mode.o
+ *fill*         0x000000000044b60a       0x16 
+ .rodata        0x000000000044b620      0x130 build/d_mode.o
  .rodata.str1.1
-                0x000000000044b770       0x54 build/d_net.o
+                0x000000000044b750       0x54 build/d_net.o
                                          0x6c (size before relaxing)
- *fill*         0x000000000044b7c4        0x4 
+ *fill*         0x000000000044b7a4        0x4 
  .rodata.str1.8
-                0x000000000044b7c8      0x108 build/d_net.o
- .rodata.cst16  0x000000000044b8d0       0x30 build/d_net.o
- .rodata        0x000000000044b900      0x300 build/f_finale.o
+                0x000000000044b7a8      0x108 build/d_net.o
+ .rodata.cst16  0x000000000044b8b0       0x30 build/d_net.o
+ .rodata        0x000000000044b8e0      0x300 build/f_finale.o
  .rodata.str1.1
-                0x000000000044bc00      0x140 build/f_finale.o
+                0x000000000044bbe0      0x140 build/f_finale.o
                                         0x153 (size before relaxing)
  .rodata.str1.8
-                0x000000000044bd40     0x1e03 build/f_finale.o
- *fill*         0x000000000044db43       0x1d 
- .rodata        0x000000000044db60       0x30 build/f_wipe.o
+                0x000000000044bd20     0x1e03 build/f_finale.o
+ *fill*         0x000000000044db23       0x1d 
+ .rodata        0x000000000044db40       0x30 build/f_wipe.o
  .rodata.str1.1
-                0x000000000044db90      0x119 build/g_game.o
+                0x000000000044db70      0x119 build/g_game.o
                                         0x13a (size before relaxing)
- *fill*         0x000000000044dca9        0x7 
+ *fill*         0x000000000044dc89        0x7 
  .rodata.str1.8
-                0x000000000044dcb0      0x24e build/g_game.o
- *fill*         0x000000000044defe        0x2 
- .rodata        0x000000000044df00      0x1c8 build/g_game.o
- .rodata.cst16  0x000000000044e0c8       0x10 build/g_game.o
- .rodata.cst4   0x000000000044e0c8        0x4 build/g_game.o
+                0x000000000044dc90      0x24e build/g_game.o
+ *fill*         0x000000000044dede        0x2 
+ .rodata        0x000000000044dee0      0x1c8 build/g_game.o
+ .rodata.cst16  0x000000000044e0a8       0x10 build/g_game.o
+ .rodata.cst4   0x000000000044e0a8        0x4 build/g_game.o
  .rodata.str1.1
-                0x000000000044e0cc      0xbaf build/hu_stuff.o
- *fill*         0x000000000044ec7b        0x5 
+                0x000000000044e0ac      0xbaf build/hu_stuff.o
+ *fill*         0x000000000044ec5b        0x5 
  .rodata.str1.8
-                0x000000000044ec80       0x67 build/hu_stuff.o
+                0x000000000044ec60       0x67 build/hu_stuff.o
  .rodata.str1.1
-                0x000000000044ece7      0x2a3 build/info.o
+                0x000000000044ecc7      0x2a3 build/info.o
                                         0x2b2 (size before relaxing)
  .rodata.str1.1
-                0x000000000044ef8a       0xa7 build/i_joystick.o
+                0x000000000044ef6a       0xa7 build/i_joystick.o
  .rodata.str1.1
-                0x000000000044f031        0xa build/i_scale.o
+                0x000000000044f011        0xa build/i_scale.o
                                           0xe (size before relaxing)
- *fill*         0x000000000044f03b        0x5 
+ *fill*         0x000000000044f01b        0x5 
  .rodata.str1.8
-                0x000000000044f040       0xc8 build/i_scale.o
+                0x000000000044f020       0xc8 build/i_scale.o
  .rodata.str1.1
-                0x000000000044f108       0x19 build/i_sound.o
+                0x000000000044f0e8       0x19 build/i_sound.o
                                          0x1a (size before relaxing)
- *fill*         0x000000000044f121        0x7 
+ *fill*         0x000000000044f101        0x7 
  .rodata.str1.8
-                0x000000000044f128      0x1c8 build/i_system.o
+                0x000000000044f108      0x1c8 build/i_system.o
  .rodata.str1.1
-                0x000000000044f2f0       0x54 build/i_system.o
- *fill*         0x000000000044f344        0x4 
- .rodata        0x000000000044f348       0x2a build/i_system.o
+                0x000000000044f2d0       0x54 build/i_system.o
+ *fill*         0x000000000044f324        0x4 
+ .rodata        0x000000000044f328       0x2a build/i_system.o
  .rodata.str1.1
-                0x000000000044f372       0x27 build/memio.o
- *fill*         0x000000000044f399        0x7 
- .rodata.cst16  0x000000000044f3a0       0x10 build/m_bbox.o
+                0x000000000044f352       0x27 build/memio.o
+ *fill*         0x000000000044f379        0x7 
+ .rodata.cst16  0x000000000044f380       0x10 build/m_bbox.o
  .rodata.str1.8
-                0x000000000044f3b0       0x76 build/m_config.o
+                0x000000000044f390       0x76 build/m_config.o
  .rodata.str1.1
-                0x000000000044f426      0xa82 build/m_config.o
+                0x000000000044f406      0xa82 build/m_config.o
                                         0xbab (size before relaxing)
- *fill*         0x000000000044fea8       0x18 
- .rodata        0x000000000044fec0      0x200 build/m_config.o
+ *fill*         0x000000000044fe88       0x18 
+ .rodata        0x000000000044fea0      0x200 build/m_config.o
  .rodata.str1.1
-                0x00000000004500c0       0x16 build/m_controls.o
+                0x00000000004500a0       0x16 build/m_controls.o
                                         0x630 (size before relaxing)
  .rodata.str1.1
-                0x00000000004500d6      0x13d build/m_menu.o
+                0x00000000004500b6      0x13d build/m_menu.o
                                         0x155 (size before relaxing)
- *fill*         0x0000000000450213        0x5 
+ *fill*         0x00000000004501f3        0x5 
  .rodata.str1.8
-                0x0000000000450218      0x2d6 build/m_menu.o
- *fill*         0x00000000004504ee        0x2 
- .rodata        0x00000000004504f0       0x20 build/m_menu.o
- .rodata.cst16  0x0000000000450510       0x10 build/m_menu.o
+                0x00000000004501f8      0x2d6 build/m_menu.o
+ *fill*         0x00000000004504ce        0x2 
+ .rodata        0x00000000004504d0       0x20 build/m_menu.o
+ .rodata.cst16  0x00000000004504f0       0x10 build/m_menu.o
  .rodata.str1.1
-                0x0000000000450520       0x2c build/m_misc.o
+                0x0000000000450500       0x2c build/m_misc.o
                                          0x3a (size before relaxing)
- *fill*         0x000000000045054c        0x4 
+ *fill*         0x000000000045052c        0x4 
  .rodata.str1.8
-                0x0000000000450550       0xb5 build/m_misc.o
- *fill*         0x0000000000450605       0x1b 
- .rodata        0x0000000000450620      0x100 build/m_random.o
- .rodata        0x0000000000450720       0x60 build/p_ceilng.o
- .rodata        0x0000000000450780      0x100 build/p_doors.o
+                0x0000000000450530       0xb5 build/m_misc.o
+ *fill*         0x00000000004505e5       0x1b 
+ .rodata        0x0000000000450600      0x100 build/m_random.o
+ .rodata        0x0000000000450700       0x60 build/p_ceilng.o
+ .rodata        0x0000000000450760      0x100 build/p_doors.o
  .rodata.str1.8
-                0x0000000000450880      0x147 build/p_doors.o
+                0x0000000000450860      0x147 build/p_doors.o
  .rodata.str1.1
-                0x00000000004509c7       0x16 build/p_enemy.o
- *fill*         0x00000000004509dd        0x3 
+                0x00000000004509a7       0x16 build/p_enemy.o
+ *fill*         0x00000000004509bd        0x3 
  .rodata.str1.8
-                0x00000000004509e0       0x25 build/p_enemy.o
- *fill*         0x0000000000450a05        0x3 
- .rodata        0x0000000000450a08       0x68 build/p_floor.o
+                0x00000000004509c0       0x25 build/p_enemy.o
+ *fill*         0x00000000004509e5        0x3 
+ .rodata        0x00000000004509e8       0x68 build/p_floor.o
  .rodata.str1.1
-                0x0000000000450a70      0x302 build/p_inter.o
- *fill*         0x0000000000450d72        0x6 
+                0x0000000000450a50      0x302 build/p_inter.o
+ *fill*         0x0000000000450d52        0x6 
  .rodata.str1.8
-                0x0000000000450d78       0xe7 build/p_inter.o
- *fill*         0x0000000000450e5f        0x1 
- .rodata        0x0000000000450e60      0x138 build/p_inter.o
+                0x0000000000450d58       0xe7 build/p_inter.o
+ *fill*         0x0000000000450e3f        0x1 
+ .rodata        0x0000000000450e40      0x138 build/p_inter.o
  .rodata.str1.8
-                0x0000000000450f98       0x6a build/p_map.o
+                0x0000000000450f78       0x6a build/p_map.o
  .rodata.str1.1
-                0x0000000000451002        0x9 build/p_map.o
- *fill*         0x000000000045100b       0x15 
- .rodata        0x0000000000451020      0x228 build/p_maputl.o
+                0x0000000000450fe2        0x9 build/p_map.o
+ *fill*         0x0000000000450feb       0x15 
+ .rodata        0x0000000000451000      0x228 build/p_maputl.o
  .rodata.str1.8
-                0x0000000000451248       0x2d build/p_mobj.o
- .rodata.cst16  0x0000000000451275       0x10 build/p_mobj.o
- *fill*         0x0000000000451275        0x3 
+                0x0000000000451228       0x2d build/p_mobj.o
+ .rodata.cst16  0x0000000000451255       0x10 build/p_mobj.o
+ *fill*         0x0000000000451255        0x3 
  .rodata.str1.8
-                0x0000000000451278       0x48 build/p_plats.o
- .rodata        0x00000000004512c0       0x28 build/p_plats.o
+                0x0000000000451258       0x48 build/p_plats.o
+ .rodata        0x00000000004512a0       0x28 build/p_plats.o
  .rodata.str1.8
-                0x00000000004512e8       0xa2 build/p_saveg.o
+                0x00000000004512c8       0xa2 build/p_saveg.o
  .rodata.str1.1
-                0x000000000045138a       0x45 build/p_saveg.o
- *fill*         0x00000000004513cf        0x1 
- .rodata        0x00000000004513d0       0x40 build/p_saveg.o
+                0x000000000045136a       0x45 build/p_saveg.o
+ *fill*         0x00000000004513af        0x1 
+ .rodata        0x00000000004513b0       0x40 build/p_saveg.o
  .rodata.str1.1
-                0x0000000000451410       0x21 build/p_setup.o
- *fill*         0x0000000000451431        0x7 
+                0x00000000004513f0       0x21 build/p_setup.o
+ *fill*         0x0000000000451411        0x7 
  .rodata.str1.8
-                0x0000000000451438       0x39 build/p_setup.o
- *fill*         0x0000000000451471        0x7 
+                0x0000000000451418       0x39 build/p_setup.o
+ *fill*         0x0000000000451451        0x7 
  .rodata.str1.8
-                0x0000000000451478       0x28 build/p_sight.o
+                0x0000000000451458       0x28 build/p_sight.o
  .rodata.str1.8
-                0x00000000004514a0      0x248 build/p_spec.o
- .rodata        0x00000000004516e8      0x568 build/p_spec.o
+                0x0000000000451480      0x248 build/p_spec.o
+ .rodata        0x00000000004516c8      0x568 build/p_spec.o
  .rodata.str1.1
-                0x0000000000451c50        0x7 build/p_spec.o
- *fill*         0x0000000000451c57        0x1 
+                0x0000000000451c30        0x7 build/p_spec.o
+ *fill*         0x0000000000451c37        0x1 
  .rodata.str1.8
-                0x0000000000451c58       0x25 build/p_switch.o
- *fill*         0x0000000000451c7d        0x3 
- .rodata        0x0000000000451c80      0x468 build/p_switch.o
+                0x0000000000451c38       0x25 build/p_switch.o
+ *fill*         0x0000000000451c5d        0x3 
+ .rodata        0x0000000000451c60      0x468 build/p_switch.o
  .rodata.str1.8
-                0x00000000004520e8       0x23 build/r_bsp.o
+                0x00000000004520c8       0x23 build/r_bsp.o
  .rodata.str1.1
-                0x000000000045210b       0x39 build/r_data.o
+                0x00000000004520eb       0x39 build/r_data.o
                                          0x47 (size before relaxing)
- *fill*         0x0000000000452144        0x4 
+ *fill*         0x0000000000452124        0x4 
  .rodata.str1.8
-                0x0000000000452148       0xf2 build/r_data.o
+                0x0000000000452128       0xf2 build/r_data.o
  .rodata.str1.1
-                0x000000000045223a       0x85 build/r_draw.o
- *fill*         0x00000000004522bf        0x1 
+                0x000000000045221a       0x85 build/r_draw.o
+ *fill*         0x000000000045229f        0x1 
  .rodata.str1.8
-                0x00000000004522c0       0x21 build/r_draw.o
- *fill*         0x00000000004522e1        0xf 
- .rodata.cst16  0x00000000004522f0       0x10 build/r_draw.o
+                0x00000000004522a0       0x21 build/r_draw.o
+ *fill*         0x00000000004522c1        0xf 
+ .rodata.cst16  0x00000000004522d0       0x10 build/r_draw.o
                                          0x20 (size before relaxing)
- .rodata.cst16  0x0000000000452300       0x10 build/r_main.o
+ .rodata.cst16  0x00000000004522e0       0x10 build/r_main.o
  .rodata.str1.1
-                0x0000000000452310       0x19 build/r_plane.o
- *fill*         0x0000000000452329        0x7 
+                0x00000000004522f0       0x19 build/r_plane.o
+ *fill*         0x0000000000452309        0x7 
  .rodata.str1.8
-                0x0000000000452330       0x94 build/r_plane.o
- *fill*         0x00000000004523c4        0x4 
+                0x0000000000452310       0x94 build/r_plane.o
+ *fill*         0x00000000004523a4        0x4 
  .rodata.str1.8
-                0x00000000004523c8       0x20 build/r_segs.o
- .rodata.cst8   0x00000000004523e8        0x8 build/r_segs.o
+                0x00000000004523a8       0x20 build/r_segs.o
+ .rodata.cst8   0x00000000004523c8        0x8 build/r_segs.o
  .rodata.str1.8
-                0x00000000004523f0      0x1e7 build/r_things.o
- *fill*         0x00000000004525d7        0x9 
- .rodata.cst16  0x00000000004525e0       0x30 build/r_things.o
- .rodata.cst16  0x0000000000452610       0x20 build/sha1.o
+                0x00000000004523d0      0x1e7 build/r_things.o
+ *fill*         0x00000000004525b7        0x9 
+ .rodata.cst16  0x00000000004525c0       0x30 build/r_things.o
+ .rodata.cst16  0x00000000004525f0       0x20 build/sha1.o
  .rodata.str1.1
-                0x0000000000452630      0x186 build/sounds.o
+                0x0000000000452610      0x186 build/sounds.o
                                         0x191 (size before relaxing)
  .rodata.str1.1
-                0x00000000004527b6        0xa build/statdump.o
+                0x0000000000452796        0xa build/statdump.o
  .rodata.str1.1
-                0x00000000004527b6       0x5b build/st_lib.o
+                0x0000000000452796       0x5b build/st_lib.o
  .rodata.str1.1
-                0x0000000000452811      0x183 build/st_stuff.o
+                0x00000000004527f1      0x183 build/st_stuff.o
                                         0x18b (size before relaxing)
- *fill*         0x0000000000452994        0x4 
+ *fill*         0x0000000000452974        0x4 
  .rodata.str1.8
-                0x0000000000452998       0x2e build/st_stuff.o
- .rodata.cst16  0x00000000004529c6       0x10 build/st_stuff.o
- *fill*         0x00000000004529c6        0x2 
+                0x0000000000452978       0x2e build/st_stuff.o
+ .rodata.cst16  0x00000000004529a6       0x10 build/st_stuff.o
+ *fill*         0x00000000004529a6        0x2 
  .rodata.str1.8
-                0x00000000004529c8       0x42 build/s_sound.o
+                0x00000000004529a8       0x42 build/s_sound.o
  .rodata.str1.1
-                0x0000000000452a0a       0x27 build/s_sound.o
- *fill*         0x0000000000452a31        0xf 
- .rodata.cst16  0x0000000000452a40       0x20 build/s_sound.o
- .rodata        0x0000000000452a60    0x10520 build/tables.o
-                0x0000000000452a60                gammatable
-                0x0000000000452f60                tantoangle
-                0x0000000000454f80                finesine
-                0x000000000045ef80                finetangent
+                0x00000000004529ea       0x27 build/s_sound.o
+ *fill*         0x0000000000452a11        0xf 
+ .rodata.cst16  0x0000000000452a20       0x20 build/s_sound.o
+ .rodata        0x0000000000452a40    0x10520 build/tables.o
+                0x0000000000452a40                gammatable
+                0x0000000000452f40                tantoangle
+                0x0000000000454f60                finesine
+                0x000000000045ef60                finetangent
  .rodata.str1.1
-                0x0000000000462f80       0x88 build/v_video.o
+                0x0000000000462f60       0x88 build/v_video.o
                                          0x90 (size before relaxing)
  .rodata.str1.8
-                0x0000000000463008       0x7c build/v_video.o
- .rodata.cst4   0x0000000000463084        0x4 build/v_video.o
- *fill*         0x0000000000463088        0x8 
- .rodata.cst16  0x0000000000463090       0x10 build/v_video.o
- .rodata.cst8   0x00000000004630a0        0x8 build/v_video.o
+                0x0000000000462fe8       0x7c build/v_video.o
+ .rodata.cst4   0x0000000000463064        0x4 build/v_video.o
+ *fill*         0x0000000000463068        0x8 
+ .rodata.cst16  0x0000000000463070       0x10 build/v_video.o
+ .rodata.cst8   0x0000000000463080        0x8 build/v_video.o
  .rodata.str1.1
-                0x00000000004630a8       0xd7 build/wi_stuff.o
+                0x0000000000463088       0xd7 build/wi_stuff.o
                                          0xe9 (size before relaxing)
- *fill*         0x000000000046317f        0x1 
+ *fill*         0x000000000046315f        0x1 
  .rodata.str1.8
-                0x0000000000463180       0x22 build/wi_stuff.o
- *fill*         0x00000000004631a2       0x1e 
- .rodata        0x00000000004631c0      0x160 build/wi_stuff.o
+                0x0000000000463160       0x22 build/wi_stuff.o
+ *fill*         0x0000000000463182       0x1e 
+ .rodata        0x00000000004631a0      0x160 build/wi_stuff.o
  .rodata.str1.1
-                0x0000000000463320        0x6 build/w_file.o
+                0x0000000000463300        0x6 build/w_file.o
  .rodata.str1.1
-                0x0000000000463326        0x6 build/w_main.o
+                0x0000000000463306        0x6 build/w_main.o
                                          0x12 (size before relaxing)
  .rodata.str1.1
-                0x000000000046332c       0x9f build/w_wad.o
+                0x000000000046330c       0x9f build/w_wad.o
                                          0xa3 (size before relaxing)
- *fill*         0x00000000004633cb        0x5 
+ *fill*         0x00000000004633ab        0x5 
  .rodata.str1.8
-                0x00000000004633d0      0x148 build/w_wad.o
+                0x00000000004633b0      0x148 build/w_wad.o
  .rodata.str1.8
-                0x0000000000463518      0x326 build/z_zone.o
+                0x00000000004634f8      0x326 build/z_zone.o
  .rodata.str1.1
-                0x000000000046383e       0x32 build/z_zone.o
- .rodata.cst16  0x0000000000463870       0x10 build/z_zone.o
+                0x000000000046381e       0x32 build/z_zone.o
+ .rodata.cst16  0x0000000000463850       0x10 build/z_zone.o
  .rodata.str1.1
-                0x0000000000463880        0x3 build/w_file_stdc.o
- .rodata        0x0000000000463880       0x80 build/i_input.o
+                0x0000000000463860        0x3 build/w_file_stdc.o
+ .rodata        0x0000000000463860       0x80 build/i_input.o
  .rodata.str1.8
-                0x0000000000463900      0x151 build/i_video.o
+                0x00000000004638e0      0x151 build/i_video.o
  .rodata.str1.1
-                0x0000000000463a51       0x1b build/i_video.o
- *fill*         0x0000000000463a6c        0x4 
- .rodata.cst16  0x0000000000463a70       0x20 build/i_video.o
+                0x0000000000463a31       0x1b build/i_video.o
+ *fill*         0x0000000000463a4c        0x4 
+ .rodata.cst16  0x0000000000463a50       0x20 build/i_video.o
  .rodata.str1.1
-                0x0000000000463a90       0x59 build/doomgeneric_cword.o
+                0x0000000000463a70       0x59 build/doomgeneric_cword.o
                                          0x5c (size before relaxing)
- *fill*         0x0000000000463ae9        0x7 
+ *fill*         0x0000000000463ac9        0x7 
  .rodata.str1.8
-                0x0000000000463af0       0x47 build/doomgeneric_cword.o
+                0x0000000000463ad0       0x47 build/doomgeneric_cword.o
 
 .rodata1
  *(.rodata1)
 
-.eh_frame_hdr   0x0000000000463b38     0x1b9c
+.eh_frame_hdr   0x0000000000463b18     0x1b9c
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x0000000000463b38     0x1b9c build/i_main.o
-                0x0000000000463b38                __GNU_EH_FRAME_HDR
+ .eh_frame_hdr  0x0000000000463b18     0x1b9c build/i_main.o
+                0x0000000000463b18                __GNU_EH_FRAME_HDR
  *(.eh_frame_entry .eh_frame_entry.*)
 
-.eh_frame       0x00000000004656d8     0x9788
+.eh_frame       0x00000000004656b8     0x9788
  *(.eh_frame)
- .eh_frame      0x00000000004656d8       0x40 /home/rtw/qword-build/build/system-root/usr/lib/crt0.o
- .eh_frame      0x0000000000465718        0x0 /home/rtw/qword-build/build/system-root/usr/lib/crt0.o
- .eh_frame      0x0000000000465718        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtbegin.o
- .eh_frame      0x0000000000465718       0x18 build/i_main.o
+ .eh_frame      0x00000000004656b8       0x40 /home/rtw/qword-build/build/system-root/usr/lib/crt0.o
+ .eh_frame      0x00000000004656f8        0x0 /home/rtw/qword-build/build/system-root/usr/lib/crt0.o
+ .eh_frame      0x00000000004656f8        0x0 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtbegin.o
+ .eh_frame      0x00000000004656f8       0x18 build/i_main.o
                                          0x30 (size before relaxing)
- .eh_frame      0x0000000000465730       0x18 build/dummy.o
+ .eh_frame      0x0000000000465710       0x18 build/dummy.o
                                          0x30 (size before relaxing)
- .eh_frame      0x0000000000465748      0x5f8 build/am_map.o
+ .eh_frame      0x0000000000465728      0x5f8 build/am_map.o
                                         0x610 (size before relaxing)
- .eh_frame      0x0000000000465d40       0x28 build/d_event.o
+ .eh_frame      0x0000000000465d20       0x28 build/d_event.o
                                          0x40 (size before relaxing)
- .eh_frame      0x0000000000465d68      0x160 build/d_iwad.o
+ .eh_frame      0x0000000000465d48      0x160 build/d_iwad.o
                                         0x178 (size before relaxing)
- .eh_frame      0x0000000000465ec8      0x138 build/d_loop.o
+ .eh_frame      0x0000000000465ea8      0x138 build/d_loop.o
                                         0x150 (size before relaxing)
- .eh_frame      0x0000000000466000      0x220 build/d_main.o
+ .eh_frame      0x0000000000465fe0      0x220 build/d_main.o
                                         0x238 (size before relaxing)
- .eh_frame      0x0000000000466220       0x78 build/d_mode.o
+ .eh_frame      0x0000000000466200       0x78 build/d_mode.o
                                          0x90 (size before relaxing)
- .eh_frame      0x0000000000466298       0x70 build/d_net.o
+ .eh_frame      0x0000000000466278       0x70 build/d_net.o
                                          0x88 (size before relaxing)
- .eh_frame      0x0000000000466308      0x1f8 build/f_finale.o
+ .eh_frame      0x00000000004662e8      0x1f8 build/f_finale.o
                                         0x210 (size before relaxing)
- .eh_frame      0x0000000000466500      0x1c0 build/f_wipe.o
+ .eh_frame      0x00000000004664e0      0x1c0 build/f_wipe.o
                                         0x1d8 (size before relaxing)
- .eh_frame      0x00000000004666c0      0x538 build/g_game.o
+ .eh_frame      0x00000000004666a0      0x538 build/g_game.o
                                         0x550 (size before relaxing)
- .eh_frame      0x0000000000466bf8      0x2b0 build/hu_lib.o
+ .eh_frame      0x0000000000466bd8      0x2b0 build/hu_lib.o
                                         0x2c8 (size before relaxing)
- .eh_frame      0x0000000000466ea8      0x128 build/hu_stuff.o
+ .eh_frame      0x0000000000466e88      0x128 build/hu_stuff.o
                                         0x140 (size before relaxing)
- .eh_frame      0x0000000000466fd0       0xb8 build/i_cdmus.o
+ .eh_frame      0x0000000000466fb0       0xb8 build/i_cdmus.o
                                          0xd0 (size before relaxing)
- .eh_frame      0x0000000000467088       0x18 build/i_endoom.o
+ .eh_frame      0x0000000000467068       0x18 build/i_endoom.o
                                          0x30 (size before relaxing)
- .eh_frame      0x00000000004670a0       0x68 build/i_joystick.o
+ .eh_frame      0x0000000000467080       0x68 build/i_joystick.o
                                          0x80 (size before relaxing)
- .eh_frame      0x0000000000467108      0x530 build/i_scale.o
+ .eh_frame      0x00000000004670e8      0x530 build/i_scale.o
                                         0x548 (size before relaxing)
- .eh_frame      0x0000000000467638      0x1c0 build/i_sound.o
+ .eh_frame      0x0000000000467618      0x1c0 build/i_sound.o
                                         0x1d8 (size before relaxing)
- .eh_frame      0x00000000004677f8      0x1d0 build/i_system.o
+ .eh_frame      0x00000000004677d8      0x1d0 build/i_system.o
                                         0x1e8 (size before relaxing)
- .eh_frame      0x00000000004679c8       0x90 build/i_timer.o
+ .eh_frame      0x00000000004679a8       0x90 build/i_timer.o
                                          0xa8 (size before relaxing)
- .eh_frame      0x0000000000467a58      0x130 build/memio.o
+ .eh_frame      0x0000000000467a38      0x130 build/memio.o
                                         0x148 (size before relaxing)
- .eh_frame      0x0000000000467b88      0x118 build/m_argv.o
+ .eh_frame      0x0000000000467b68      0x118 build/m_argv.o
                                         0x130 (size before relaxing)
- .eh_frame      0x0000000000467ca0       0x28 build/m_bbox.o
+ .eh_frame      0x0000000000467c80       0x28 build/m_bbox.o
                                          0x40 (size before relaxing)
- .eh_frame      0x0000000000467cc8       0x68 build/m_cheat.o
+ .eh_frame      0x0000000000467ca8       0x68 build/m_cheat.o
                                          0x80 (size before relaxing)
- .eh_frame      0x0000000000467d30      0x1a0 build/m_config.o
+ .eh_frame      0x0000000000467d10      0x1a0 build/m_config.o
                                         0x1b8 (size before relaxing)
- .eh_frame      0x0000000000467ed0       0xf0 build/m_controls.o
+ .eh_frame      0x0000000000467eb0       0xf0 build/m_controls.o
                                         0x108 (size before relaxing)
- .eh_frame      0x0000000000467fc0       0x28 build/m_fixed.o
+ .eh_frame      0x0000000000467fa0       0x28 build/m_fixed.o
                                          0x40 (size before relaxing)
- .eh_frame      0x0000000000467fe8      0x7e0 build/m_menu.o
+ .eh_frame      0x0000000000467fc8      0x7e0 build/m_menu.o
                                         0x7f8 (size before relaxing)
- .eh_frame      0x00000000004687c8      0x380 build/m_misc.o
+ .eh_frame      0x00000000004687a8      0x380 build/m_misc.o
                                         0x398 (size before relaxing)
- .eh_frame      0x0000000000468b48       0x40 build/m_random.o
+ .eh_frame      0x0000000000468b28       0x40 build/m_random.o
                                          0x58 (size before relaxing)
- .eh_frame      0x0000000000468b88       0xd0 build/p_ceilng.o
+ .eh_frame      0x0000000000468b68       0xd0 build/p_ceilng.o
                                          0xe8 (size before relaxing)
- .eh_frame      0x0000000000468c58      0x150 build/p_doors.o
+ .eh_frame      0x0000000000468c38      0x150 build/p_doors.o
                                         0x168 (size before relaxing)
- .eh_frame      0x0000000000468da8      0xd28 build/p_enemy.o
+ .eh_frame      0x0000000000468d88      0xd28 build/p_enemy.o
                                         0xd40 (size before relaxing)
- .eh_frame      0x0000000000469ad0      0x148 build/p_floor.o
+ .eh_frame      0x0000000000469ab0      0x148 build/p_floor.o
                                         0x160 (size before relaxing)
- .eh_frame      0x0000000000469c18      0x1d8 build/p_inter.o
+ .eh_frame      0x0000000000469bf8      0x1d8 build/p_inter.o
                                         0x1f0 (size before relaxing)
- .eh_frame      0x0000000000469df0      0x1e8 build/p_lights.o
+ .eh_frame      0x0000000000469dd0      0x1e8 build/p_lights.o
                                         0x200 (size before relaxing)
- .eh_frame      0x0000000000469fd8      0x500 build/p_map.o
+ .eh_frame      0x0000000000469fb8      0x500 build/p_map.o
                                         0x518 (size before relaxing)
- .eh_frame      0x000000000046a4d8      0x340 build/p_maputl.o
+ .eh_frame      0x000000000046a4b8      0x340 build/p_maputl.o
                                         0x358 (size before relaxing)
- .eh_frame      0x000000000046a818      0x468 build/p_mobj.o
+ .eh_frame      0x000000000046a7f8      0x468 build/p_mobj.o
                                         0x480 (size before relaxing)
- .eh_frame      0x000000000046ac80       0xf8 build/p_plats.o
+ .eh_frame      0x000000000046ac60       0xf8 build/p_plats.o
                                         0x110 (size before relaxing)
- .eh_frame      0x000000000046ad78      0x590 build/p_pspr.o
+ .eh_frame      0x000000000046ad58      0x590 build/p_pspr.o
                                         0x5a8 (size before relaxing)
- .eh_frame      0x000000000046b308      0x418 build/p_saveg.o
+ .eh_frame      0x000000000046b2e8      0x418 build/p_saveg.o
                                         0x430 (size before relaxing)
- .eh_frame      0x000000000046b720      0x2b0 build/p_setup.o
+ .eh_frame      0x000000000046b700      0x2b0 build/p_setup.o
                                         0x2c8 (size before relaxing)
- .eh_frame      0x000000000046b9d0      0x118 build/p_sight.o
+ .eh_frame      0x000000000046b9b0      0x118 build/p_sight.o
                                         0x130 (size before relaxing)
- .eh_frame      0x000000000046bae8      0x428 build/p_spec.o
+ .eh_frame      0x000000000046bac8      0x428 build/p_spec.o
                                         0x440 (size before relaxing)
- .eh_frame      0x000000000046bf10      0x130 build/p_switch.o
+ .eh_frame      0x000000000046bef0      0x130 build/p_switch.o
                                         0x148 (size before relaxing)
- .eh_frame      0x000000000046c040       0x58 build/p_telept.o
+ .eh_frame      0x000000000046c020       0x58 build/p_telept.o
                                          0x70 (size before relaxing)
- .eh_frame      0x000000000046c098       0x90 build/p_tick.o
+ .eh_frame      0x000000000046c078       0x90 build/p_tick.o
                                          0xa8 (size before relaxing)
- .eh_frame      0x000000000046c128       0xf0 build/p_user.o
+ .eh_frame      0x000000000046c108       0xf0 build/p_user.o
                                         0x108 (size before relaxing)
- .eh_frame      0x000000000046c218      0x1a8 build/r_bsp.o
+ .eh_frame      0x000000000046c1f8      0x1a8 build/r_bsp.o
                                         0x1c0 (size before relaxing)
- .eh_frame      0x000000000046c3c0      0x2f0 build/r_data.o
+ .eh_frame      0x000000000046c3a0      0x2f0 build/r_data.o
                                         0x308 (size before relaxing)
- .eh_frame      0x000000000046c6b0      0x1c0 build/r_draw.o
+ .eh_frame      0x000000000046c690      0x1c0 build/r_draw.o
                                         0x1d8 (size before relaxing)
- .eh_frame      0x000000000046c870      0x2c8 build/r_main.o
+ .eh_frame      0x000000000046c850      0x2c8 build/r_main.o
                                         0x2e0 (size before relaxing)
- .eh_frame      0x000000000046cb38      0x158 build/r_plane.o
+ .eh_frame      0x000000000046cb18      0x158 build/r_plane.o
                                         0x170 (size before relaxing)
- .eh_frame      0x000000000046cc90       0xe0 build/r_segs.o
+ .eh_frame      0x000000000046cc70       0xe0 build/r_segs.o
                                          0xf8 (size before relaxing)
- .eh_frame      0x000000000046cd70       0x18 build/r_sky.o
+ .eh_frame      0x000000000046cd50       0x18 build/r_sky.o
                                          0x30 (size before relaxing)
- .eh_frame      0x000000000046cd88      0x2e0 build/r_things.o
+ .eh_frame      0x000000000046cd68      0x2e0 build/r_things.o
                                         0x2f8 (size before relaxing)
- .eh_frame      0x000000000046d068      0x158 build/sha1.o
+ .eh_frame      0x000000000046d048      0x158 build/sha1.o
                                         0x170 (size before relaxing)
- .eh_frame      0x000000000046d1c0       0x38 build/statdump.o
+ .eh_frame      0x000000000046d1a0       0x38 build/statdump.o
                                          0x50 (size before relaxing)
- .eh_frame      0x000000000046d1f8      0x1e0 build/st_lib.o
+ .eh_frame      0x000000000046d1d8      0x1e0 build/st_lib.o
                                         0x1f8 (size before relaxing)
- .eh_frame      0x000000000046d3d8      0x328 build/st_stuff.o
+ .eh_frame      0x000000000046d3b8      0x328 build/st_stuff.o
                                         0x340 (size before relaxing)
- .eh_frame      0x000000000046d700      0x268 build/s_sound.o
+ .eh_frame      0x000000000046d6e0      0x268 build/s_sound.o
                                         0x280 (size before relaxing)
- .eh_frame      0x000000000046d968       0x18 build/tables.o
+ .eh_frame      0x000000000046d948       0x18 build/tables.o
                                          0x30 (size before relaxing)
- .eh_frame      0x000000000046d980      0x460 build/v_video.o
+ .eh_frame      0x000000000046d960      0x460 build/v_video.o
                                         0x478 (size before relaxing)
- .eh_frame      0x000000000046dde0      0x708 build/wi_stuff.o
+ .eh_frame      0x000000000046ddc0      0x708 build/wi_stuff.o
                                         0x720 (size before relaxing)
- .eh_frame      0x000000000046e4e8       0x50 build/w_checksum.o
+ .eh_frame      0x000000000046e4c8       0x50 build/w_checksum.o
                                          0x68 (size before relaxing)
- .eh_frame      0x000000000046e538       0x48 build/w_file.o
+ .eh_frame      0x000000000046e518       0x48 build/w_file.o
                                          0x60 (size before relaxing)
- .eh_frame      0x000000000046e580       0x30 build/w_main.o
+ .eh_frame      0x000000000046e560       0x30 build/w_main.o
                                          0x48 (size before relaxing)
- .eh_frame      0x000000000046e5b0      0x340 build/w_wad.o
+ .eh_frame      0x000000000046e590      0x340 build/w_wad.o
                                         0x358 (size before relaxing)
- .eh_frame      0x000000000046e8f0      0x1d8 build/z_zone.o
+ .eh_frame      0x000000000046e8d0      0x1d8 build/z_zone.o
                                         0x1f0 (size before relaxing)
- .eh_frame      0x000000000046eac8       0x70 build/w_file_stdc.o
+ .eh_frame      0x000000000046eaa8       0x70 build/w_file_stdc.o
                                          0x88 (size before relaxing)
- .eh_frame      0x000000000046eb38       0x38 build/i_input.o
+ .eh_frame      0x000000000046eb18       0x38 build/i_input.o
                                          0x50 (size before relaxing)
- .eh_frame      0x000000000046eb70      0x200 build/i_video.o
+ .eh_frame      0x000000000046eb50      0x200 build/i_video.o
                                         0x218 (size before relaxing)
- .eh_frame      0x000000000046ed70       0x18 build/doomgeneric.o
+ .eh_frame      0x000000000046ed50       0x18 build/doomgeneric.o
                                          0x30 (size before relaxing)
- .eh_frame      0x000000000046ed88       0xd4 build/doomgeneric_cword.o
+ .eh_frame      0x000000000046ed68       0xd4 build/doomgeneric_cword.o
                                          0xf0 (size before relaxing)
- .eh_frame      0x000000000046ee5c        0x4 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtend.o
+ .eh_frame      0x000000000046ee3c        0x4 /home/rtw/cword-build/build/tools/system-gcc/bin/../lib/gcc/x86_64-cword/9.2.0/crtend.o
  *(.eh_frame.*)
 
 .gcc_except_table

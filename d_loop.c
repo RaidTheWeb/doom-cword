@@ -729,7 +729,6 @@ void TryRunTics(void)
     }
 
     lowtic = GetLowTic();
-    DEH_printf("GetLowTic: Got lowtic.\n");
 
     availabletics = lowtic - gametic / ticdup;
 
