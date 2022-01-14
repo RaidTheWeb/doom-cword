@@ -1,5 +1,5 @@
 # build files
-*.o
+build/**
 *.map
 
 # resulting file
