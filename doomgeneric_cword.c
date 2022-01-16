@@ -21,13 +21,15 @@ static int framebuffer_fd = -1;
 static uint32_t* framebuffer;
 static FILE* file;
 
-static int ttyfd = -1;
+static int kbdfd = -1;
 
-#define KEYQUEUE_SIZE 16
+#define KEYQUEUE_SIZE 256
 
 static uint16_t keyqueue[KEYQUEUE_SIZE];
+static uint8_t keyqueueraw[KEYQUEUE_SIZE];
 static uint32_t keyqueuewriteindex = 0;
 static uint32_t keyqueuereadindex = 0;
+static uint32_t keyqueuewriteindexraw = 0;
 
 static uint32_t posX = 0;
 static uint32_t posY = 0;
@@ -36,6 +38,25 @@ static uint32_t screenWidth = 0;
 static uint32_t screenHeight = 0;
 static uint32_t bpp = 0;
 static uint32_t pitch = 0;
+
+static int left_lock = 0;
+static int right_lock = 0;
+static int up_lock = 0;
+static int down_lock = 0;
+
+#define ENTER 0x1C
+#define ENTER_REL 0x9C
+#define ESCAPE 0x01
+#define LEFT 0x4B
+#define LEFT_REL 0xCB
+#define RIGHT 0x4D
+#define RIGHT_REL 0xCD
+#define UP 0x48
+#define UP_REL 0xC8
+#define DOWN 0x50
+#define DOWN_REL 0xD0
+#define CTRL 0x1D
+#define CTRL_REL 0x9D
 
 static uint8_t convertToDoomKey(uint8_t scancode) {
     uint8_t key = 0;
@@ -76,6 +97,18 @@ static uint8_t convertToDoomKey(uint8_t scancode) {
         case 0x15:
             key = 'y';
             break;
+        case 0x11:
+            key = 'w';
+            break;
+        case 0x1f:
+            key = 's';
+            break;
+        case 0x1e:
+            key = 'a';
+            break;
+        case 0x20:
+            key = 'd';
+            break;
         default:
             break;
     }
@@ -83,9 +116,16 @@ static uint8_t convertToDoomKey(uint8_t scancode) {
     return key;
 }
 
-static void addKeyToQueue(int pressed, uint8_t keyCode) {
+static void addKeyToQueue(int pressed, uint8_t keyCode, int norepeat) {
     uint8_t key = convertToDoomKey(keyCode);
     uint16_t keyData = (pressed << 8) | key;
+
+    if(norepeat)
+        if(keyqueueraw[keyqueuewriteindexraw - 1] == keyCode) return;
+
+    keyqueueraw[keyqueuewriteindexraw] = keyCode;
+    keyqueuewriteindexraw++;
+    keyqueuewriteindexraw %= KEYQUEUE_SIZE;
 
     keyqueue[keyqueuewriteindex] = keyData;
     keyqueuewriteindex++;
@@ -141,9 +181,13 @@ void DG_Init() {
 
     enableRawMode();
 
-    if(STDIN_FILENO >= 0) {
-        int flags = fcntl(STDIN_FILENO, F_GETFL, 0);
-        fcntl(STDIN_FILENO, F_SETFL, flags | O_NONBLOCK);
+    kbdfd = open("/dev/keyboard", O_RDONLY);
+
+    if(kbdfd >= 0) {
+        ioctl(kbdfd, 0x0313, 0); // placeholder ioctl to flush keyboard buffer
+        //int flags = fcntl(STDIN_FILENO, F_GETFL, 0);
+        //fcntl(STDIN_FILENO, F_SETFL, flags | O_NONBLOCK);
+        // flags are not required, /dev/keyboard is a non blocking interface by design.
     }
 
     int argPosX = 0;
@@ -161,30 +205,30 @@ void DG_Init() {
 }
 
 static void handleKeyInput() {
-    if(STDIN_FILENO < 0) return;
+    if(kbdfd < 0) return;
 
     uint8_t scancode = 0;
 
-    if(read(STDIN_FILENO, &scancode, 1) > 0) {
+    if(read(kbdfd, &scancode, 1) > 0) {
         uint8_t pressed = (scancode & 0x80) == 0x80;
 
         scancode = scancode & 0x7F;
 
-        printf("Handling input!\n");
+        //printf("%s: 0x%2x (%i)\n", pressed ? "Released" : "Pressed", (uint32_t)scancode, (uint32_t)scancode);
+        //ioctl(kbdfd, 0x0313, 0); // placeholder ioctl to flush keyboard buffer
 
-        if(pressed) addKeyToQueue(1, scancode);
-        else addKeyToQueue(0, scancode);
+        addKeyToQueue(!pressed, scancode, 0);
     }
 }
 
 void DG_DrawFrame() {
-    /*fclose(file);
+    fclose(file);
     file = fopen("/dev/fb0", "r+b");
     fseek(file, 0, SEEK_SET);
     fread(framebuffer, pitch * screenHeight * sizeof(uint8_t), 1, file);
     fseek(file, 0, SEEK_SET);
     fclose(file);
-    file = fopen("/dev/fb0", "w+b");*/
+    file = fopen("/dev/fb0", "w+b");
     for(int i = 0; i < DOOMGENERIC_RESY; ++i) {
         // TODO: Work with proper screensize information
         memcpy(framebuffer + posX + (i + posY) * screenWidth, DG_ScreenBuffer + i * DOOMGENERIC_RESX, DOOMGENERIC_RESX * (bpp / 8));
@@ -194,7 +238,7 @@ void DG_DrawFrame() {
     fseek(file, 0, SEEK_SET);
     //printf("Wrote to framebuffer!\n");
 
-    //handleKeyInput();
+    handleKeyInput();
 }
 
 void DG_SleepMs(uint32_t ms) {
@@ -210,6 +254,7 @@ int DG_GetKey(int* pressed, uint8_t* doomKey) {
         // funny empty queue
         return 0;
     } else {
+        //printf("DG_GetKey: Grabbing key data!\n");
         uint16_t keyData = keyqueue[keyqueuereadindex];
         keyqueuereadindex++;
         keyqueuereadindex %= KEYQUEUE_SIZE;
