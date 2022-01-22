@@ -1,3 +1,5 @@
+.PHONY: install
+
 ################################################################
 #
 # $Id:$
@@ -33,13 +35,15 @@ clean:
 	rm -f $(OUTPUT).gdb
 	rm -f $(OUTPUT).map
 
+install:
+	cp $(OUTPUT) $(DESTDIR)/usr/bin
+
 $(OUTPUT):	$(OBJS)
 	@echo [Linking $@]
 	$(VB)$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) \
 	-o $(OUTPUT) $(LIBS) -Wl,-Map,$(OUTPUT).map
 	@echo [Size]
 	-$(CROSS_COMPILE)size $(OUTPUT)
-	cp $(OUTPUT) ../../build/system-root/usr/bin
 
 $(OBJS): | $(OBJDIR)
 
