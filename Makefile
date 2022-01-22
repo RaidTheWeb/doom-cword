@@ -36,6 +36,7 @@ clean:
 	rm -f $(OUTPUT).map
 
 install:
+	mkdir -p $(DESTDIR)/usr/bin
 	install -s $(OUTPUT) $(DESTDIR)/usr/bin
 
 $(OUTPUT):	$(OBJS)
