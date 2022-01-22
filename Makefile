@@ -36,7 +36,7 @@ clean:
 	rm -f $(OUTPUT).map
 
 install:
-	cp $(OUTPUT) $(DESTDIR)/usr/bin
+	install -s $(OUTPUT) $(DESTDIR)/usr/bin
 
 $(OUTPUT):	$(OBJS)
 	@echo [Linking $@]
