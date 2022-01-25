@@ -142,8 +142,9 @@ void enableRawMode() {
     tcgetattr(STDIN_FILENO, &orig_termios);
     atexit(disableRawMode);
     struct termios raw = orig_termios;
-    raw.c_lflag &= ~(ECHO);
+    raw.c_lflag &= ~(ECHO | ICANON);
     raw.c_cc[VMIN] = 0;
+    raw.c_cc[VTIME] = 1;
     tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
 }
 
@@ -181,7 +182,7 @@ void DG_Init() {
 
     enableRawMode();
 
-    kbdfd = open("/dev/keyboard", O_RDONLY);
+    kbdfd = open("/dev/kbd", O_RDONLY);
 
     if(kbdfd >= 0) {
         ioctl(kbdfd, 0x0313, 0); // placeholder ioctl to flush keyboard buffer
